@@ -45,9 +45,12 @@
 	
 	// base
 	color: #ffffff;
+	background: #333333;
+	display: inline-block;
 	margin-left: 3px;
 	margin-right: 3px;
 	transition: all 0.2s linear;
+	font-size: 14px;
 	&:hover, &:focus {
 		color: #ffffff;
 	}
@@ -80,8 +83,12 @@
 	for $color, $colorhex in button_map {
 		&--{$color} { 
 			background: $colorhex;
-			&:hover {
+			if ( 'white' == $color ) {
+				color: #333333;
+			}
+			&:hover, &:focus {
 				background: darken($colorhex, 15%);
+				color: #333333;
 			}
 		}
 	}

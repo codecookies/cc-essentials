@@ -83,7 +83,9 @@ $cce_shortcodes['button'] = array(
 				'yellow'	=> __( 'Yellow', 'cc' ),
 				'blue'		=> __( 'Blue', 'cc' ),
 				'black'		=> __( 'Black', 'cc' ),
-				'gray'		=> __( 'Gray', 'cc' )
+				'white'		=> __( 'White', 'cc' ),
+				'gray'		=> __( 'Gray', 'cc' ),
+				'primary'	=> __( 'As per theme', 'cc')
 			)
 		),
 		'size' => array(

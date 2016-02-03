@@ -63,7 +63,7 @@ function cce_button( $atts, $content = null ) {
 		$button_content = do_shortcode( $content );
 	}
 
-	return '<a target="'. esc_attr( $args['target'] ) .'" href="'. esc_url( $args['url'] ) .'" class="cce-button'. esc_attr( $class ) .'">'. $button_content .'</a>';
+	return '<a target="'. esc_attr( $args['target'] ) .'" href="'. esc_url( $args['url'] ) .'" class="cce-section cce-button'. esc_attr( $class ) .'">'. $button_content .'</a>';
 }
 endif;
 add_shortcode( 'cce_button', 'cce_button' );

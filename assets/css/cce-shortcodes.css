@@ -47,10 +47,13 @@
 /* Buttons */
 .cce .cce-button {
   color: #fff;
+  background: #333;
+  display: inline-block;
   margin-left: 3px;
   margin-right: 3px;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  font-size: 14px;
 }
 .cce .cce-button:hover,
 .cce .cce-button:focus {
@@ -79,38 +82,59 @@
 .cce .cce-button--red {
   background: #da4f49;
 }
-.cce .cce-button--red:hover {
+.cce .cce-button--red:hover,
+.cce .cce-button--red:focus {
   background: #ce312a;
+  color: #333;
 }
 .cce .cce-button--green {
   background: #5bb75b;
 }
-.cce .cce-button--green:hover {
+.cce .cce-button--green:hover,
+.cce .cce-button--green:focus {
   background: #47a247;
+  color: #333;
 }
 .cce .cce-button--yellow {
   background: #faa732;
 }
-.cce .cce-button--yellow:hover {
+.cce .cce-button--yellow:hover,
+.cce .cce-button--yellow:focus {
   background: #f99406;
+  color: #333;
 }
 .cce .cce-button--black {
   background: #363636;
 }
-.cce .cce-button--black:hover {
+.cce .cce-button--black:hover,
+.cce .cce-button--black:focus {
   background: #2e2e2e;
+  color: #333;
 }
 .cce .cce-button--blue {
   background: #006dcc;
 }
-.cce .cce-button--blue:hover {
+.cce .cce-button--blue:hover,
+.cce .cce-button--blue:focus {
   background: #005dad;
+  color: #333;
 }
 .cce .cce-button--gray {
   background: #767676;
 }
-.cce .cce-button--gray:hover {
+.cce .cce-button--gray:hover,
+.cce .cce-button--gray:focus {
   background: #646464;
+  color: #333;
+}
+.cce .cce-button--white {
+  background: #fff;
+  color: #333;
+}
+.cce .cce-button--white:hover,
+.cce .cce-button--white:focus {
+  background: #d9d9d9;
+  color: #333;
 }
 .cce .cce-button--icon-before .fa {
   margin-right: 8px;
@@ -342,6 +366,12 @@
 }
 .cce .cce-label--gray:hover {
   background: #646464;
+}
+.cce .cce-label--white {
+  background: #fff;
+}
+.cce .cce-label--white:hover {
+  background: #d9d9d9;
 }
 .cce .cce-label--rounded {
   border-radius: 3px;
