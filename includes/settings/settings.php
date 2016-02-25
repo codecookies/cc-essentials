@@ -17,9 +17,10 @@ function cce_get_settings() {
 	$settings = get_option( 'cce_options' );
 
 	if ( empty( $settings ) ) {
-		$social_settings  = is_array( get_option( 'cce_settings_social' ) ) ? get_option( 'cce_settings_social' ) : array();
+		$loveit_settings = is_array( get_option( 'cce_settings_loveit' ) ) ? get_option( 'cce_settings_loveit' ) : array();
+		$social_settings = is_array( get_option( 'cce_settings_social' ) ) ? get_option( 'cce_settings_social' ) : array();
 
-		$settings = array_merge( $social_settings );
+		$settings = array_merge( $loveit_settings, $social_settings );
 
 		update_option( 'cce_options', $settings );
 	}
@@ -28,7 +29,7 @@ function cce_get_settings() {
 }
 
 function cce_options_page() {
-	$active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'social';
+	$active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'loveit';
 
 	ob_start(); ?>
 
@@ -83,6 +84,7 @@ function cce_options_page() {
  */
 function cce_get_settings_tabs() {
 	$tabs              = array();
+	$tabs['loveit']    = __( 'Love It! button', 'cc' );
 	$tabs['social']    = __( 'Social icons', 'cc' );
 
 	return apply_filters( 'cce_settings_tabs', $tabs );
@@ -102,7 +104,7 @@ function cce_settings_sanitize( $input = array() ) {
 
 	$output    = array();
 	$settings  = cce_get_registered_settings();
-	$tab       = isset( $referrer['tab'] ) ? $referrer['tab'] : 'social';
+	$tab       = isset( $referrer['tab'] ) ? $referrer['tab'] : 'loveit';
 	$post_data = isset( $_POST[ 'cce_settings_' . $tab ] ) ? $_POST[ 'cce_settings_' . $tab ] : array();
 
 	$input = apply_filters( 'cce_settings_' . $tab . '_sanitize', $post_data );
@@ -197,6 +199,55 @@ add_action( 'admin_init', 'cce_register_settings' );
  */
 function cce_get_registered_settings() {
 	$cce_settings = array(
+		'loveit' => apply_filters('cce_loveit_settings', 
+			array(
+				'show_loveit_button_on' => array(
+					'id'   			=> 'show_loveit_button_on',
+					'name' 			=> __('Show ‘Love It!’ button on', 'verve'),
+					'desc' 			=> __('Specify where the ‘Love It!’ button should be displayed.', 'verve'),
+					'type' 			=> 'checkbox',
+					'options'		=> array (
+						'post'	=> array( 'name' => __( 'Blog posts', 'cc' ), 'default' => 'checked' ),
+						'page'  => array( 'name' => __( 'Pages', 'cc' ), 'default' => 'checked' ),
+						
+					)
+				),
+				'prefix_text' => array(
+					'id'   			=> 'prefix_text',
+					'name' 			=> __('Prefix text', 'verve'),
+					'placeholder' 	=> 'Loved this?',
+					'desc' 			=> __('The text before the icon. Leave blank for no text before the icon.', 'verve'),
+					'type' 			=> 'text'
+				),
+				'suffix_text_zero' => array(
+					'id'   			=> 'suffix_text_zero',
+					'name' 			=> __('Suffix text when no loves received', 'verve'),
+					'placeholder' 	=> __('No loves yet!', 'verve'),
+					'desc' 			=> __('The text after the count when no one has loved a post/page. Leave blank for no text after the count.', 'verve'),
+					'type' 			=> 'text'
+				),
+				'suffix_text_one' => array(
+					'id'   			=> 'suffix_text_one',
+					'name' 			=> __('Suffix text when 1 love received', 'verve'),
+					'placeholder' 	=> __('person loved this!', 'verve'),
+					'desc' 			=> __('The text after the count when one person has loved a post/page. Leave blank for no text after the count.', 'verve'),
+					'type' 			=> 'text'
+				),
+				'suffix_text_more' => array(
+					'id'   			=> 'suffix_text_more',
+					'name' 			=> __('Suffix text when more than 1 loves received', 'verve'),
+					'placeholder' 	=> __('people loved this!', 'verve'),
+					'desc' 			=> __('The text after the count when more than one person has loved a post/page. Leave blank for no text after the count.', 'verve'),
+					'type' 			=> 'text'
+				),
+				'shortcode_template_tag' => array(
+					'id'   			=> 'shortcode_template_tag',
+					'name' 			=> __('Shortcode & Template tag usage', 'verve'),
+					'desc' 			=> '<p>'.__('To use ‘Love It!’ anywhere within your posts and pages you can use the shortcode:', 'verve').'</p><p><code>[cc_loveit]</code></p><p>' . __('To use ‘Love It!’ button manually in your theme template use the following PHP code:', 'verve') . '</p><p><code>&lt;?php if( function_exists(\'cc_loveit\') ) cc_loveit(); ?&gt;</code></p>',
+					'type' 			=> 'textblock'
+				)
+			)
+		),
 		'social' => apply_filters( 'cce_social_settings',
 			array(
 				'facebook' => array(
@@ -204,98 +255,98 @@ function cce_get_registered_settings() {
 					'name' 			=> 'Facebook',
 					'placeholder' 	=> 'https://www.facebook.com/username',
 					'desc' 			=> 'Enter the URL of your Facebook profile or page.',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				),
 				'twitter' => array(
 					'id'   			=> 'twitter',
 					'name' 			=> 'Twitter',
 					'placeholder' 	=> 'http://twitter.com/username',
 					'desc' 			=> 'Enter the URL of your Twitter profile.',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				),
 				'instagram' => array(
 					'id'   			=> 'instagram',
 					'name' 			=> 'Instagram',
 					'placeholder' 	=> 'http://instagram.com/username',
 					'desc' 			=> 'Enter the URL of your Instagram profile.',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				),
 				'youtube' => array(
 					'id'   			=> 'youtube',
 					'name' 			=> 'YouTube',
 					'placeholder' 	=> 'http://www.youtube.com/user/username',
 					'desc' 			=> 'Enter the URL of your Youtube profile.',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				),
 				'flickr' => array(
 					'id'   			=> 'flickr',
 					'name' 			=> 'Flickr',
 					'placeholder' 	=> 'http://www.flickr.com/photos/username',
 					'desc' 			=> 'Enter the URL of your Flickr profile.',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				),
 				'google-plus' => array(
 					'id'   			=> 'google-plus',
 					'name' 			=> 'Google+',
 					'placeholder' 	=> 'https://plus.google.com/username',
 					'desc' 			=> 'Enter the URL of your Google+ profile if you use it :P',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				),
 				'linkedin' => array(
 					'id'   			=> 'linkedin',
 					'name' 			=> 'LinkedIn',
 					'placeholder' 	=> 'http://www.linkedin.com/in/username',
 					'desc' 			=> 'Enter the URL of your LinkedIn profile.',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				),
 				'mail' => array(
 					'id'   			=> 'mail',
 					'name' 			=> 'Email',
 					'placeholder' 	=> 'user@name.com',
 					'desc' 			=> 'Enter your email.',
-					'type' 			=> 'text',
+					'type' 			=> 'text'
 				),
 				'pinterest' => array(
 					'id'   			=> 'pinterest',
 					'name' 			=> 'Pinterest',
 					'placeholder' 	=> 'http://pinterest.com/username',
 					'desc' 			=> 'Enter the URL of your Pinterest profile.',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				),
 				'dribbble' => array(
 					'id'   			=> 'dribbble',
 					'name' 			=> 'Dribbble',
 					'placeholder' 	=> 'http://dribbble.com/username',
 					'desc' 			=> 'Enter the URL of your Dribbble profile.',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				),
 				'behance' => array(
 					'id'   			=> 'behance',
 					'name' 			=> 'Behance',
 					'placeholder'	=> 'https://behance.com/username',
 					'desc' 			=> 'Enter the URL of your Behance profile.',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				),
 				'deviantart' => array(
 					'id'   			=> 'deviantart',
 					'name' 			=> 'Deviant Art',
 					'placeholder' 	=> 'http://username.deviantart.com',
 					'desc' 			=> 'Enter the URL of your DeviantArt profile.',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				),
 				'foursquare' => array(
 					'id'   			=> 'foursquare',
 					'name' 			=> 'Foursquare',
 					'placeholder' 	=> 'https://foursquare.com/username',
 					'desc' 			=> 'Enter the URL of your Foursquare profile.',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				),
 				'github' => array(
 					'id'   			=> 'github',
 					'name' 			=> 'GitHub',
 					'placeholder' 	=> 'https://github.com/username',
 					'desc' 			=> 'Enter the URL of your Github page.',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				),
 				'rss' => array(
 					'id'   			=> 'rss',
@@ -303,42 +354,42 @@ function cce_get_registered_settings() {
 					'placeholder' 	=> 'http://example.com/feed',
 					'desc' 			=> 'Enter the URL of your RSS feed.',
 					'type' 			=> 'url',
-					'std'  			=> get_bloginfo( 'rss2_url' ),
+					'std'  			=> get_bloginfo( 'rss2_url' )
 				),
 				'skype' => array(
 					'id'   			=> 'skype',
 					'name' 			=> 'Skype',
 					'placeholder' 	=> 'skype: +1 (234) 5678 &nbsp;&nbsp;or&nbsp;&nbsp; skype: john_doe',
 					'desc' 			=> 'Enter your Skype call URI. For e.g. &lsquo;skype: [phone_number]&rsquo; or &lsquo;skype: [username]&rsquo;',
-					'type' 			=> 'text',
+					'type' 			=> 'text'
 				),
 				'tumblr' => array(
 					'id'   			=> 'tumblr',
 					'name' 			=> 'Tumblr',
 					'placeholder' 	=> 'http://username.tumblr.com',
 					'desc' 			=> 'Enter the URL of your Tumblr blog.',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				),
 				'vimeo' => array(
 					'id'   			=> 'vimeo',
 					'name' 			=> 'Vimeo',
 					'placeholder' 	=> 'https://vimeo.com/username',
 					'desc' 			=> 'Enter the URL of your Vimeo profile.',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				),
 				'vine' => array(
 					'id'   			=> 'vine',
 					'name' 			=> 'Vine',
 					'placeholder' 	=> 'https://vine.co/username',
 					'desc' 			=> 'Enter the URL of your Vine profile.',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				),
 				'wordpress' => array(
 					'id'   			=> 'wordpress',
 					'name' 			=> 'WordPress',
 					'placeholder' 	=> 'https://profiles.wordpress.org/username',
 					'desc' 			=> 'Enter the URL of your WordPress profile.',
-					'type' 			=> 'url',
+					'type' 			=> 'url'
 				)
 			)
 		)
@@ -433,6 +484,59 @@ function cce_select_callback( $args ) {
 
 	echo $html;
 }
+
+/**
+ * Checkbox callback.
+ *
+ * Renders Checkbox fields.
+ *
+ * @since 1.0.0
+ * @param  array $args Arguments passed by the setting
+ * @global $cce_options Array of all CCEssentials options
+ * @return void
+ */
+function cce_checkbox_callback( $args ) {
+	global $cce_options;
+	
+	if ( isset( $cce_options[ $args['id'] ] ) ) {
+		$value = $cce_options[ $args['id'] ];
+	} else {
+		$value = isset( $args['std'] ) ? $args['std'] : '';
+	}
+		
+	foreach ( $args['options'] as $option => $optionparams ) :	
+		if ( isset($value[$option]) && 'on' === $value[$option] ) { 
+			$checked = 'checked="checked"';
+		} else {
+			$checked = '';
+			$value[$option] = 0;
+		}
+		$html .= '<input type="checkbox" id="cce_settings_' . $args['section'] . '[' . $args['id'] . '][' . $option . ']" name="cce_settings_' . $args['section'] . '[' . $args['id'] . '][' . $option . ']"' . $checked . '/>' . $optionparams['name'] . '<br>';	
+	endforeach;
+
+	$html .= '<p class="description">'  . $args['desc'] . '</p>';
+
+	echo $html;
+}
+
+/**
+ * Textblock callback.
+ *
+ * Renders text-block.
+ *
+ * @since 1.0.0
+ * @param  array $args Arguments passed by the setting
+ * @global $cce_options Array of all CCEssentials options
+ * @return void
+ */
+function cce_textblock_callback( $args ) {
+	global $cce_options;
+	
+	$html = $args['desc'];
+	
+	echo $html;
+}
+
 
 /**
  * Header callback.

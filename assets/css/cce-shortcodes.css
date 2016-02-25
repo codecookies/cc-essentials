@@ -48,6 +48,7 @@
 .cce .cce-button {
   color: #fff;
   background: #333;
+  border: none;
   display: inline-block;
   margin-left: 3px;
   margin-right: 3px;
@@ -58,6 +59,7 @@
 .cce .cce-button:hover,
 .cce .cce-button:focus {
   color: #fff;
+  outline: none;
 }
 .cce .cce-button--small {
   padding: 5px 10px;
