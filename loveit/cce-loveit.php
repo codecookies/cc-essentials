@@ -48,7 +48,7 @@ class CCELoveIt {
 		*/
 		
 		if( is_singular('post') && $cce_options['show_loveit_button_on']['post'] ) $content .= $this->do_likes();
-		if( is_page() && !is_front_page() && $cce_options['show_loveit_button_on']['post'] ) $content .= $this->do_likes();
+		if( is_page() && !is_front_page() && $cce_options['show_loveit_button_on']['page'] ) $content .= $this->do_likes();
 		
 		//Under consideration: if(( is_front_page() || is_home() || is_category() || is_tag() || is_author() || is_date() || is_search()) && $options['add_to_other'] ) $content .= $this->do_likes();
 		
