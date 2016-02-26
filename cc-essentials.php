@@ -91,7 +91,8 @@ class CCEssentials {
 		add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'new_action_links' ) );
 		add_action( 'init', array( &$this, 'init' ) );
 		add_action( 'admin_menu', array( &$this, 'cce_settings_page' ) );
-		add_action( 'after_setup_theme', array( &$this, 'cce_shortcode_css' ) );
+		add_action( 'after_setup_theme', array( &$this, 'cce_shortcode_css') );
+		add_action( 'after_setup_theme', array( &$this, 'cce_loveit_class') );
 
 		// Include required files
 		$this->includes();
@@ -152,7 +153,17 @@ class CCEssentials {
 		$cce_shortcode_css = $this->plugin_url() . '/assets/css/cce-shortcodes.css';
 		add_editor_style( $cce_shortcode_css );
 	}
-
+	
+	/**
+	 * CCE Love It class load.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 * @return void
+	 */
+	public function cce_loveit_class() {
+		include_once( 'loveit/cce-loveit.php' );
+	}
 
 	/**
 	 * Setup localisation.

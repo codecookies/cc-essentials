@@ -243,7 +243,7 @@ function cce_get_registered_settings() {
 				'shortcode_template_tag' => array(
 					'id'   			=> 'shortcode_template_tag',
 					'name' 			=> __('Shortcode & Template tag usage', 'verve'),
-					'desc' 			=> '<p>'.__('To use ‘Love It!’ anywhere within your posts and pages you can use the shortcode:', 'verve').'</p><p><code>[cc_loveit]</code></p><p>' . __('To use ‘Love It!’ button manually in your theme template use the following PHP code:', 'verve') . '</p><p><code>&lt;?php if( function_exists(\'cc_loveit\') ) cc_loveit(); ?&gt;</code></p>',
+					'desc' 			=> '<p>'.__('To use ‘Love It!’ anywhere within your posts and pages you can use the shortcode:', 'verve').'</p><p><code>[cce_loveit]</code></p><p>' . __('To use ‘Love It!’ button manually in your theme template use the following PHP code:', 'verve') . '</p><p><code>&lt;?php if( function_exists(\'cce_loveit\') ) cce_loveit(); ?&gt;</code></p>',
 					'type' 			=> 'textblock'
 				)
 			)
