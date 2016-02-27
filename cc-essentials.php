@@ -139,7 +139,7 @@ class CCEssentials {
 	 * @return void
 	 */
 	public function cce_settings_page() {
-		add_menu_page( __( 'CC Essentials - Settings', 'cc' ), __( 'CC Essentials', 'cc' ), 'update_core', 'cce', 'cce_options_page' );
+		add_menu_page( __( 'CC Essentials - Settings', 'cc' ), __( 'CC Essentials', 'cc' ), 'update_core', 'cce', 'cce_options_page', 'dashicons-admin-plugins' );
 	}
 	
 	/**
