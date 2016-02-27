@@ -14,7 +14,7 @@ class CCShortcodes {
 	public function admin_menu_styles( $hook ) {
 		global $cce;
 
-		wp_enqueue_style( 'cce_admin_menu_styles', $cce->plugin_url() . '/assets/css/cce-admin-styles.css' );
+		wp_enqueue_style( 'cce-admin-shortcodes-styles', $cce->plugin_url() . '/assets/css/cce-admin-styles-shortcodes.css' );
 
 		wp_enqueue_style( 'font-awesome', $cce->plugin_url() . '/assets/css/font-awesome.min.css', '', '4.5.0' );
 

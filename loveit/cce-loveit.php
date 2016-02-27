@@ -5,26 +5,47 @@ if ( ! class_exists( 'CCELoveIt' ) ) {
 class CCELoveIt {
 
     function __construct() {
+	    $cce_options = get_option('cce_options');
         add_action('wp_enqueue_scripts', array(&$this, 'enqueue_scripts'));
+        add_action('admin_enqueue_scripts', array( &$this, 'admin_enqueue_scripts') );
         add_filter('the_content', array(&$this, 'the_content'));
         add_filter('the_excerpt', array(&$this, 'the_content'));
         add_action('publish_post', array(&$this, 'setup_loveit'));
-        add_action('wp_ajax_cce_loveit', array(&$this, 'ajax_callback'));
+        if ( $cce_options['show_loveit_button_on']['post'] ) {
+        	add_filter('manage_posts_columns', array(&$this, 'cce_loveit_column_title'));
+			add_action('manage_posts_custom_column', array(&$this, 'cce_loveit_column_content'), 10, 2);
+		}
+		if ( $cce_options['show_loveit_button_on']['page'] ) {
+			add_filter('manage_pages_columns', array(&$this, 'cce_loveit_column_title'));
+			add_action('manage_pages_custom_column', array(&$this, 'cce_loveit_column_content'), 10, 2);
+		}
+		add_action('wp_ajax_cce_loveit', array(&$this, 'ajax_callback'));
 		add_action('wp_ajax_nopriv_cce_loveit', array(&$this, 'ajax_callback'));
         add_shortcode('cce_loveit', array(&$this, 'shortcode'));
         //add_action('widgets_init', create_function('', 'register_widget("ZillaLikes_Widget");'));
 	}
 	
 	function enqueue_scripts() {	
+		
 		$cce_options = get_option('cce_options');
 		
 		if ( !empty($cce_options['show_loveit_button_on']) ) {
 		
 			global $cce;
-		
 			wp_enqueue_style( 'cce-loveit', $cce->plugin_url() . '/assets/css/cce-loveit.css' );
 			wp_enqueue_script( 'cce-loveit', $cce->plugin_url() . '/assets/js/cce-loveit.js', array('jquery') );
 			wp_localize_script( 'cce-loveit', 'cce_loveit', array('ajaxurl' => admin_url('admin-ajax.php'), 'loved_text' => __( 'You already loved this!', 'cc' )) );
+		}
+	}
+	
+	function admin_enqueue_scripts() {
+		
+		$cce_options = get_option('cce_options');
+		
+		if ( !empty($cce_options['show_loveit_button_on']) ) {
+			
+			global $cce;
+			wp_enqueue_style( 'cce-admin-loveit-styles', $cce->plugin_url() . '/assets/css/cce-admin-styles-loveit.css' );
 		}
 	}
 	
@@ -41,12 +62,6 @@ class CCELoveIt {
 		
 		$cce_options = get_option('cce_options');
 		
-		
-		/* 
-		$ids = explode(',', $options['exclude_from']); // Under consideration
-		if(in_array(get_the_ID(), $ids)) return $content;
-		*/
-		
 		if( is_singular('post') && $cce_options['show_loveit_button_on']['post'] ) $content .= $this->do_likes();
 		if( is_page() && !is_front_page() && $cce_options['show_loveit_button_on']['page'] ) $content .= $this->do_likes();
 		
@@ -61,7 +76,23 @@ class CCELoveIt {
 		add_post_meta($post_id, '_cce_loves', '0', true);
 	}
 	
-	function ajax_callback($post_id) {
+	function cce_loveit_column_title( $defaults ) {
+		$defaults['cce-loveit-data'] = __( 'Loves received', 'cc' );
+		return $defaults;
+	}
+	
+	function cce_loveit_column_content( $column_name, $post_id ) {
+		if ($column_name == 'cce-loveit-data') {
+			$loves = get_post_meta($post_id, '_cce_loves', true);
+			if ($loves) {
+				echo $loves . ' ' . __( 'loves','cc' );
+			} else {
+				echo __( '0 loves','cc' );
+			}
+		}
+	}
+	
+	function ajax_callback( $post_id ) {
 
 		$cce_options = get_option('cce_options');
 
