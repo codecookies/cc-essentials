@@ -194,7 +194,7 @@ function cce_loveit()
 class CCELoveIt_Widget extends WP_Widget {
 
 	function __construct() {
-		parent::__construct( 'cce_loveit_widget', 'CC - Most Loved Posts', array( 'description' => __('Displays most loved posts in descending order', 'cc') ) );
+		parent::__construct( 'cce_loveit_widget', __('CC - Most Loved Posts', 'cc'), array( 'description' => __('Displays most loved posts in descending order.', 'cc') ) );
 	}
 
 	function widget( $args, $instance ) {
