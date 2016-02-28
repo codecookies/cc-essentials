@@ -87,7 +87,7 @@ function cce_get_settings_tabs() {
 	$tabs['loveit']    = __( 'Love It! button', 'cc' );
 	$tabs['social']    = __( 'Social icons', 'cc' );
 
-	return apply_filters( 'cce_settings_tabs', $tabs );
+	return apply_filters( 'cce_get_settings_tabs', $tabs );
 }
 
 /**
