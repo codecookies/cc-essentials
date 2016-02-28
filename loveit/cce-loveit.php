@@ -22,7 +22,7 @@ class CCELoveIt {
 		add_action('wp_ajax_cce_loveit', array(&$this, 'ajax_callback'));
 		add_action('wp_ajax_nopriv_cce_loveit', array(&$this, 'ajax_callback'));
         add_shortcode('cce_loveit', array(&$this, 'shortcode'));
-        //add_action('widgets_init', create_function('', 'register_widget("ZillaLikes_Widget");'));
+        add_action('widgets_init', create_function('', 'register_widget("CCELoveIt_Widget");'));
 	}
 	
 	function enqueue_scripts() {	
@@ -185,6 +185,105 @@ function cce_loveit()
 {
 	global $cce_loveit;
     echo $cce_loveit->do_likes(); 
+}
+
+/**
+ * Widget to display most loved posts.
+ */
+
+class CCELoveIt_Widget extends WP_Widget {
+
+	function __construct() {
+		parent::__construct( 'cce_loveit_widget', 'CC - Most Loved Posts', array( 'description' => __('Displays most loved posts in descending order', 'cc') ) );
+	}
+
+	function widget( $args, $instance ) {
+		extract( $args );
+
+		$title = apply_filters( 'widget_title', $instance['title'] );
+		$desc = $instance['description'];
+		$posts = empty( $instance['posts'] ) ? 1 : $instance['posts'];
+		$display_count = $instance['display_count'];
+
+		// Output our widget
+		echo $before_widget;
+		if( !empty( $title ) ) echo $before_title . $title . $after_title;
+
+		if( $desc ) echo '<p>' . $desc . '</p>';
+
+		$loved_posts_args = array(
+			'numberposts' => $posts,
+			'orderby' => 'meta_value_num',
+			'order' => 'DESC',
+			'meta_key' => '_cce_loves',
+			'post_type' => 'post',
+			'post_status' => 'publish'
+		);
+		$loved_posts = get_posts($loved_posts_args);
+
+		echo '<ul class="cce_most_loved_posts">';
+		foreach( $loved_posts as $loved_post ) {
+			$count_output = '';
+			if( $display_count ) {
+				$count = get_post_meta( $loved_post->ID, '_cce_loves', true);
+				$count_output = " <span class='cce-loveit-count'>($count)</span>";
+			}
+			echo '<li><a href="' . get_permalink($loved_post->ID) . '">' . get_the_title($loved_post->ID) . '</a>' . $count_output . '</li>';
+		}
+		echo '</ul>';
+
+		echo $after_widget;
+	}
+
+	function update( $new_instance, $old_instance ) {
+		$instance = $old_instance;
+		$instance['title'] = strip_tags($new_instance['title']);
+		$instance['description'] = strip_tags($new_instance['description'], '<a><b><strong><i><em><span>');
+		$instance['posts'] = strip_tags($new_instance['posts']);
+		$instance['display_count'] = strip_tags($new_instance['display_count']);
+
+		return $instance;
+	}
+
+	function form( $instance ) {
+		$instance = wp_parse_args(
+			(array) $instance
+		);
+
+		$defaults = array(
+			'title' => __('Most loved posts', 'cc'),
+			'description' => '',
+			'posts' => 5,
+			'display_count' => 1
+		);
+
+		$instance = wp_parse_args( (array) $instance, $defaults );
+
+		$title = $instance['title'];
+		$description = $instance['description'];
+		$posts = $instance['posts'];
+		$display_count = $instance['display_count'];
+		?>
+
+		<p>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label> 
+			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id('description'); ?>"><?php _e('Description:'); ?></label> 
+			<input class="widefat" id="<?php echo $this->get_field_id('description'); ?>" name="<?php echo $this->get_field_name('description'); ?>" type="text" value="<?php echo $description; ?>" />
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id('posts'); ?>"><?php _e('Posts:'); ?></label> 
+			<input id="<?php echo $this->get_field_id('posts'); ?>" name="<?php echo $this->get_field_name('posts'); ?>" type="text" value="<?php echo $posts; ?>" size="3" />
+		</p>
+		<p>
+			<input id="<?php echo $this->get_field_id('display_count'); ?>" name="<?php echo $this->get_field_name('display_count'); ?>" type="checkbox" value="1" <?php checked( $display_count ); ?>>
+			<label for="<?php echo $this->get_field_id('display_count'); ?>"><?php _e('Display counts'); ?></label>
+		</p>
+
+		<?php
+	}
 }
 
 }
