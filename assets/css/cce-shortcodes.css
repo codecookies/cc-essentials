@@ -182,6 +182,7 @@
 .cce .cce-notification {
   padding: 15px 20px;
   position: relative;
+  border-radius: 3px;
 }
 .cce .cce-notification--info {
   background: #d9edf7;
