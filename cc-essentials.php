@@ -261,7 +261,7 @@ class CCEssentials {
 	public function shortcode_css() {
 		
 		// Registering styles
-		wp_register_style( 'font-awesome', $this->plugin_url() . '/assets/css/font-awesome.min.css' , '', '4.4.0', 'all' );
+		wp_register_style( 'font-awesome', $this->plugin_url() . '/assets/css/font-awesome.min.css' , '', '4.6.0', 'all' );
 		wp_register_style( 'cce-shortcode-styles', $this->plugin_url() . '/assets/css/cce-shortcodes.css' , array( 'font-awesome' ), $this->version, 'all' );
 
 		// Enqueuing styles
@@ -269,7 +269,7 @@ class CCEssentials {
 		wp_enqueue_style( 'cce-shortcode-styles' );
 
 		// Registering scripts
-		wp_register_script( 'cce-shortcode-scripts', $this->plugin_url(). '/assets/js/cce-shortcode-scripts.js', array( 'jquery', 'jquery-ui-accordion', 'jquery-ui-tabs' ), $this->version, true ); // This script will be enqueued only when necessary
+		wp_register_script( 'cce-shortcode-scripts', $this->plugin_url(). '/assets/js/min/cce-shortcode-scripts.min.js', array( 'jquery', 'jquery-ui-accordion', 'jquery-ui-tabs' ), $this->version, true ); // This script will be enqueued only when necessary
 	}
 
 	/**

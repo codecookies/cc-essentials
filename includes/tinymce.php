@@ -83,7 +83,7 @@ class CCEssentials_TinyMCE {
 	 */
 	public function add_tinymce_plugin( $plugins ) {
 		global $cce;
-		$plugins['cce_mce_hr_button'] = $cce->plugin_url() . '/assets/js/tinymce-button.js';
+		$plugins['cce_mce_hr_button'] = $cce->plugin_url() . '/assets/js/min/tinymce-button.min.js';
 
 		return $plugins;
 	}

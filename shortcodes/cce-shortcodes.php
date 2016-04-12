@@ -16,9 +16,9 @@ class CCShortcodes {
 
 		wp_enqueue_style( 'cce-admin-shortcodes-styles', $cce->plugin_url() . '/assets/css/cce-admin-styles-shortcodes.css' );
 
-		wp_enqueue_style( 'font-awesome', $cce->plugin_url() . '/assets/css/font-awesome.min.css', '', '4.5.0' );
+		wp_enqueue_style( 'font-awesome', $cce->plugin_url() . '/assets/css/font-awesome.min.css', '', '4.6.0' );
 
-		wp_register_script( 'font-awesome-icons-list', $cce->plugin_url() . '/assets/js/min/icons.min.js', array(), false, true );
+		wp_register_script( 'font-awesome-icons-list', $cce->plugin_url() . '/assets/js/min/icons.min.js', array(), '4.6.0', true );
 		wp_enqueue_script( 'font-awesome-icons-list' );
 
 		wp_enqueue_script( 'jquery-ui-sortable' );
@@ -50,7 +50,7 @@ class CCShortcodes {
 	public function add_rich_plugins( $plugin_array ) {
 		global $cce;
 
-		$plugin_array['cceShortcodes'] = $cce->plugin_url() . '/assets/js/plugin.js'; // For older version of TinyMCE, use plugin.legacy.js
+		$plugin_array['cceShortcodes'] = $cce->plugin_url() . '/assets/js/min/plugin.min.js'; // For older version of TinyMCE, use plugin.legacy.js
 
 		return $plugin_array;
 	}

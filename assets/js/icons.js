@@ -1,85 +1,97 @@
 var stIconObj = stIconObj || {};
 stIconObj["fontawesome"] = {
 	"Newest icons": [{
-	    "name":     "Bluetooth",
-	    "id":       "fa-bluetooth",
-	    "unicode":  "f293"
+	    "name":     "American-sign-language-interpreting",
+	    "id":       "fa fa-asl-interpreting",
+	    "unicode":  "f2a3"
 	}, {
-	    "name":     "Bluetooth-b",
-	    "id":       "fa-bluetooth-b",
-	    "unicode":  "f294"
+	    "name":     "Assistive-listening-systems",
+	    "id":       "fa fa-assistive-listening-systems",
+	    "unicode":  "f2a2"
 	}, {
-	    "name":     "Codiepie",
-	    "id":       "fa-codiepie",
-	    "unicode":  "f284"
+	    "name":     "Audio-description",
+	    "id":       "fa fa-audio-description",
+	    "unicode":  "f29e"
 	}, {
-	    "name":     "Credit-card-alt",
-	    "id":       "fa-credit-card-alt",
-	    "unicode":  "f283"
+	    "name":     "Blind",
+	    "id":       "fa fa-blind",
+	    "unicode":  "f29d"
 	}, {
-	    "name":     "Edge",
-	    "id":       "fa-edge",
-	    "unicode":  "f282"
+	    "name":     "Braille",
+	    "id":       "fa fa-braille",
+	    "unicode":  "f2a1"
 	}, {
-	    "name":     "Fort-awesome",
-	    "id":       "fa-fort-awesome",
-	    "unicode":  "f286"
+	    "name":     "Deaf",
+	    "id":       "fa fa-deaf",
+	    "unicode":  "f2a4"
 	}, {
-	    "name":     "Hashtag",
-	    "id":       "fa-hashtag",
-	    "unicode":  "f292"
+	    "name":     "Envira",
+	    "id":       "fa fa-envira",
+	    "unicode":  "f299"
 	}, {
-	    "name":     "Mixcloud",
-	    "id":       "fa-mixcloud",
-	    "unicode":  "f289"
+	    "name":     "Gitlab",
+	    "id":       "fa fa-gitlab",
+	    "unicode":  "f296"
 	}, {
-	    "name":     "Modx",
-	    "id":       "fa-modx",
-	    "unicode":  "f285"
+	    "name":     "Glide",
+	    "id":       "fa fa-glide",
+	    "unicode":  "f2a5"
 	}, {
-	    "name":     "Pause-circle",
-	    "id":       "fa-pause-circle",
-	    "unicode":  "f28b"
+	    "name":     "Glide-g",
+	    "id":       "fa fa-glide-g",
+	    "unicode":  "f2a6"
 	}, {
-	    "name":     "Pause-circle-o",
-	    "id":       "fa-pause-circle-o",
-	    "unicode":  "f28c"
+	    "name":     "Low-vision",
+	    "id":       "fa fa-low-vision",
+	    "unicode":  "f2a8"
 	}, {
-	    "name":     "Percent",
-	    "id":       "fa-percent",
-	    "unicode":  "f295"
+	    "name":     "Question-circle-o",
+	    "id":       "fa fa-question-circle-o",
+	    "unicode":  "f29c"
 	}, {
-	    "name":     "Product-hunt",
-	    "id":       "fa-product-hunt",
-	    "unicode":  "f288"
+	    "name":     "Sign-language",
+	    "id":       "fa fa-sign-language",
+	    "unicode":  "f2a7"
 	}, {
-	    "name":     "Reddit-alien",
-	    "id":       "fa-reddit-alien",
-	    "unicode":  "f281"
+	    "name":     "Snapchat",
+	    "id":       "fa fa-snapchat",
+	    "unicode":  "f2ab"
 	}, {
-	    "name":     "Scribd",
-	    "id":       "fa-scribd",
-	    "unicode":  "f28a"
+	    "name":     "Snapchat-ghost",
+	    "id":       "fa fa-snapchat-ghost",
+	    "unicode":  "f2ac"
 	}, {
-	    "name":     "Shopping-bag",
-	    "id":       "fa-shopping-bag",
-	    "unicode":  "f290"
+	    "name":     "Snapchat-square",
+	    "id":       "fa fa-snapchat-square",
+	    "unicode":  "f2ad"
 	}, {
-	    "name":     "Shopping-basket",
-	    "id":       "fa-shopping-basket",
-	    "unicode":  "f291"
+	    "name":     "Universal-access",
+	    "id":       "fa fa-universal-access",
+	    "unicode":  "f29a"
 	}, {
-	    "name":     "Stop-circle",
-	    "id":       "fa-stop-circle",
-	    "unicode":  "f28d"
+	    "name":     "Viadeo",
+	    "id":       "fa fa-viadeo",
+	    "unicode":  "f2a9"
 	}, {
-	    "name":     "Stop-circle-o",
-	    "id":       "fa-stop-circle-o",
-	    "unicode":  "f28e"
+	    "name":     "Viadeo-square",
+	    "id":       "fa fa-viadeo-square",
+	    "unicode":  "f2aa"
 	}, {
-	    "name":     "Usb",
-	    "id":       "fa-usb",
-	    "unicode":  "f287"
+	    "name":     "Volume-control-phone",
+	    "id":       "fa fa-volume-control-phone",
+	    "unicode":  "f2a0"
+	}, {
+	    "name":     "Wheelchair-alt",
+	    "id":       "fa fa-wheelchair-alt",
+	    "unicode":  "f29b"
+	}, {
+	    "name":     "Wpbeginner",
+	    "id":       "fa fa-wpbeginner",
+	    "unicode":  "f297"
+	}, {
+	    "name":     "Wpforms",
+	    "id":       "fa fa-wpforms",
+	    "unicode":  "f298"
 	}],
     "Web Application Icons": [{
 	    "name":     "Adjust",
