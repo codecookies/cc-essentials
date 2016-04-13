@@ -207,8 +207,8 @@ function cce_get_registered_settings() {
 					'desc' 			=> __('Specify where the ‘Love It!’ button should be displayed.', 'verve'),
 					'type' 			=> 'checkbox',
 					'options'		=> array (
-						'post'	=> array( 'name' => __( 'Blog posts', 'cc' ), 'default' => 'checked' ),
-						'page'  => array( 'name' => __( 'Pages', 'cc' ), 'default' => 'checked' ),
+						'post'	=> array( 'name' => __( 'Blog posts', 'cc' ) ),
+						'page'  => array( 'name' => __( 'Pages', 'cc' ) ),
 						
 					)
 				),
@@ -351,10 +351,9 @@ function cce_get_registered_settings() {
 				'rss' => array(
 					'id'   			=> 'rss',
 					'name' 			=> 'RSS',
-					'placeholder' 	=> 'http://example.com/feed',
+					'placeholder' 	=> get_bloginfo( 'rss2_url' ),
 					'desc' 			=> 'Enter the URL of your RSS feed.',
-					'type' 			=> 'url',
-					'std'  			=> get_bloginfo( 'rss2_url' )
+					'type' 			=> 'url'
 				),
 				'skype' => array(
 					'id'   			=> 'skype',
@@ -505,7 +504,7 @@ function cce_checkbox_callback( $args ) {
 	}
 		
 	foreach ( $args['options'] as $option => $optionparams ) :	
-		if ( isset($value[$option]) && 'on' === $value[$option] ) { 
+		if ( isset( $value[$option] ) ) { 
 			$checked = 'checked="checked"';
 		} else {
 			$checked = '';
