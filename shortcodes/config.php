@@ -213,7 +213,7 @@ $cce_shortcodes['notification'] = array(
 				'info'		=> __( 'Info', 'cc' ),
 				'success' 	=> __( 'Success', 'cc' ),
 				'warning' 	=> __( 'Warning', 'cc' ),
-				'error' 	=> __( 'Error', 'cc' )
+				'danger' 	=> __( 'Error', 'cc' )
 			)
 		),
 		'title' => array(
@@ -291,7 +291,7 @@ $cce_shortcodes['testimonial'] = array(
 		'name' => array(
 			'std'   => '',
 			'type'  => 'text',
-			'label' => __( 'Author&rsquo;s name', 'cc' ),
+			'label' => __( 'Author’s name', 'cc' ),
 			'desc'  => __( 'Enter the author&rsquo;s name.', 'cc' )
 		),
 		'content' => array(
@@ -299,6 +299,12 @@ $cce_shortcodes['testimonial'] = array(
 			'type'  => 'textarea',
 			'label' => __( 'Testimonial / quote', 'cc' ),
 			'desc'  => __( 'The actual testimonial/quotation.', 'cc' )
+		),
+		'image' => array(
+			'std'   => '',
+			'type'  => 'image',
+			'label' => __( 'Author’s image (optional)', 'cc' ),
+			'desc'  => __( 'Link to the JPG/PNG image file.', 'cc' )
 		),
 		'subtitle' => array(
 			'std'   => '',
@@ -313,7 +319,7 @@ $cce_shortcodes['testimonial'] = array(
 			'desc'  => __( 'Link to author&rsquo;s site.', 'cc' )
 		)		
 	),
-	'shortcode'   => '[cce_testimonial name="{{name}}" subtitle="{{subtitle}}" url="{{url}}"]{{content}}[/cce_testimonial]',
+	'shortcode'   => '[cce_testimonial name="{{name}}" image="{{image}}" subtitle="{{subtitle}}" url="{{url}}"]{{content}}[/cce_testimonial]',
 	'popup_title' => __( 'Testimonial / quote settings', 'cc' ),
 );
 
@@ -603,17 +609,11 @@ $cce_shortcodes['hdivider'] = array(
 $cce_shortcodes['map'] = array(
 	'no_preview' => true,
 	'params' => array(
-		'lat' => array(
+		'latlong' => array(
 			'std'   => '',
-			'type'  => 'text',
-			'label' => __( 'Latitude', 'cc' ),
-			'desc'  => sprintf( __( 'Enter the latitude of the location. Find latitude / longitude <a href="%1$s" target="_blank">here</a>.', 'cc' ), esc_url( 'http://mondeca.com/index.php/en/any-place-en' ) )
-		),
-		'long' => array(
-			'std'   => '',
-			'type'  => 'text',
-			'label' => __( 'Longitude', 'cc' ),
-			'desc'  => sprintf( __( 'Enter the longitude of the location. Find latitude / longitude <a href="%1$s" target="_blank">here</a>.', 'cc' ), esc_url( 'http://mondeca.com/index.php/en/any-place-en' ) )
+			'type'  => 'map',
+			'label' => __( 'Latitude / Longitude', 'cc' ),
+			'desc'  => __( 'Drag and drop the map marker to select the exact location.', 'cc' )
 		),
 		'width' => array(
 			'std'   => '100%',
@@ -648,6 +648,6 @@ $cce_shortcodes['map'] = array(
 			)
 		),
 	),
-	'shortcode'   => '[cce_map lat="{{lat}}" long="{{long}}" width="{{width}}" height="{{height}}" zoom="{{zoom}}" style="{{style}}"]',
+	'shortcode'   => '[cce_map location="{{latlong}}" width="{{width}}" height="{{height}}" zoom="{{zoom}}" style="{{style}}"]',
 	'popup_title' => __( 'Insert a Google map', 'cc' )
 );

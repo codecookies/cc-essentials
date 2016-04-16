@@ -173,10 +173,13 @@ function cce_testimonial( $atts, $content = null ) {
 	$args = shortcode_atts( array(
 		'name' => '',
 		'subtitle' => '',
+		'image' => '',
 		'url' => ''
 	), $atts, 'cce_testimonial' );
+	
+	$image = $args['image'] ? '<img src="' . esc_url($args['image']) . '" />' : FALSE;
 
-	return '<div class="cce-section cce-testimonial"><blockquote>' . wpautop( do_shortcode( $content ) )  . '<small><cite>' . esc_attr($args['name']) . '</cite>' . esc_attr($args['subtitle']) . ' - <a href="' . esc_url($args['url']) . '">' . esc_url($args['url']) . '</a></small></blockquote></div>';
+	return '<div class="cce-section cce-testimonial"><blockquote>' . wpautop( do_shortcode( $content ) )  . '<small><cite>' . $image . esc_attr($args['name']) . '</cite>' . esc_attr($args['subtitle']) . ' - <a href="' . esc_url($args['url']) . '">' . esc_url($args['url']) . '</a></small></blockquote></div>';
 }
 endif;
 add_shortcode( 'cce_testimonial', 'cce_testimonial' );
@@ -389,13 +392,14 @@ add_shortcode( 'cce_hdivider', 'cce_hdivider' );
 if ( ! function_exists( 'cce_map' ) ) :
 function cce_map( $atts ) {
 	$args = shortcode_atts( array(
-		'lat'    => '37.4221295',
-		'long'   => '-122.0857928',
+		'location'    => '40.778462,-73.968201',
 		'width'  => '100%',
 		'height' => '350px',
 		'zoom'   => 15,
 		'style'  => 'none',
 	), $atts, 'cce_map' );
+	
+	$location = explode(',', esc_js( $args['location'] ));
 
 	$map_styles = array(
 		'none'             => '[]',
@@ -406,7 +410,7 @@ function cce_map( $atts ) {
 		'subtle_grayscale' => '[{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]',
 	);
 
-	$map_id = 'map-'. rand( 0, 99 );
+	$map_id = uniqid('cce-map-');
 
 	wp_enqueue_script( 'google-maps', ( is_ssl() ? 'https' : 'http' ) . '://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false' );
 
@@ -448,10 +452,7 @@ function cce_map( $atts ) {
     	    	id: "<?php echo esc_js( $map_id ); ?>",
     	    	styles: <?php echo $map_styles[$args['style']]; ?>,
     	    	zoom: <?php echo esc_js( $args['zoom'] ); ?>,
-    	    	center: {
-    	    		lat: "<?php echo esc_js( $args['lat'] ); ?>",
-    	    		long: "<?php echo esc_js( $args['long'] ); ?>"
-    	    	}
+    	    	center: {lat: <?php echo $location[0]; ?>, long: <?php echo $location[1]; ?>}
     	    };
 
     	    cce_sc_map.Map.init(options);

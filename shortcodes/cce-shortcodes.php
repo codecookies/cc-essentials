@@ -22,7 +22,8 @@ class CCShortcodes {
 		wp_enqueue_script( 'font-awesome-icons-list' );
 
 		wp_enqueue_script( 'jquery-ui-sortable' );
-		wp_enqueue_script( 'cce-shortcode-plugins', $cce->plugin_url() . '/assets/js/min/shortcodes_plugins.min.js', array( 'font-awesome-icons-list' ), $cce->version, true );
+		wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?&libraries=places', null, $cce->version, true );
+		wp_enqueue_script( 'cce-shortcode-plugins', $cce->plugin_url() . '/assets/js/min/shortcodes_plugins.min.js', array( 'font-awesome-icons-list', 'google-maps' ), $cce->version, true );
 		
 		wp_enqueue_style( 'wp-color-picker' );        
 		wp_enqueue_script( 'wp-color-picker' );
