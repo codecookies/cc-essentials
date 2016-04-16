@@ -3,7 +3,8 @@
 @import "_preboot";
 
 .cce .cce-section {
-	margin-bottom: 1.6rem;
+	margin-bottom: 1.6em
+	overflow: auto
 }
 
 /* ===================================================================
@@ -86,11 +87,14 @@
 		&--{$color} { 
 			background: $colorhex;
 			if ( 'white' == $color ) {
-				color: #333333;
+				color: #333333
 			}
 			&:hover, &:focus {
-				background: darken($colorhex, 15%);
-				color: #333333;
+				background: darken($colorhex, 15%)
+				if ( 'white' == $color ) {
+					background: darken($colorhex, 5%)
+					color: #333333
+				}
 			}
 		}
 	}
@@ -199,10 +203,10 @@
 /* Tabbed content */
 
 .cce .cce-tabs {
-	float: left;
 	.cce-nav {
 		list-style: none;
 		margin: 0;
+		padding: 0;
 		position: relative;
 		z-index: 10;
 		li {
@@ -263,6 +267,16 @@
 	
 }
 
+/* Testimonial / quote content */
+
+.cce .cce-testimonial {
+	
+	blockquote {
+		margin-top: 1em
+		margin-bottom: 0
+	}
+}
+
 
 /* ===================================================================
 /*	Layout columns
@@ -296,7 +310,6 @@
 	.cce-one-fourth {
 		position: relative;
 		margin-right: 4%;
-		margin-bottom: 2em;
 		float: left;
 	}
 

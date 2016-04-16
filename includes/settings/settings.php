@@ -496,6 +496,7 @@ function cce_select_callback( $args ) {
  */
 function cce_checkbox_callback( $args ) {
 	global $cce_options;
+	$html = '';
 	
 	if ( isset( $cce_options[ $args['id'] ] ) ) {
 		$value = $cce_options[ $args['id'] ];

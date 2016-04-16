@@ -6,16 +6,19 @@ class CCELoveIt {
 
     function __construct() {
 	    $cce_options = get_option('cce_options');
+	    $show_on_posts = isset($cce_options['show_loveit_button_on']['post']) ? $cce_options['show_loveit_button_on']['post'] : FALSE;
+	    $show_on_pages = isset($cce_options['show_loveit_button_on']['page']) ? $cce_options['show_loveit_button_on']['page'] : FALSE;
+	    
         add_action('wp_enqueue_scripts', array(&$this, 'enqueue_scripts'));
         add_action('admin_enqueue_scripts', array( &$this, 'admin_enqueue_scripts') );
         add_filter('the_content', array(&$this, 'the_content'));
         add_filter('the_excerpt', array(&$this, 'the_content'));
         add_action('publish_post', array(&$this, 'setup_loveit'));
-        if ( $cce_options['show_loveit_button_on']['post'] ) {
+        if ( $show_on_posts ) {
         	add_filter('manage_posts_columns', array(&$this, 'cce_loveit_column_title'));
 			add_action('manage_posts_custom_column', array(&$this, 'cce_loveit_column_content'), 10, 2);
 		}
-		if ( $cce_options['show_loveit_button_on']['page'] ) {
+		if ( $show_on_pages ) {
 			add_filter('manage_pages_columns', array(&$this, 'cce_loveit_column_title'));
 			add_action('manage_pages_custom_column', array(&$this, 'cce_loveit_column_content'), 10, 2);
 		}
@@ -61,9 +64,11 @@ class CCELoveIt {
 		}
 		
 		$cce_options = get_option('cce_options');
+		$show_on_posts = isset($cce_options['show_loveit_button_on']['post']) ? $cce_options['show_loveit_button_on']['post'] : FALSE;
+	    $show_on_pages = isset($cce_options['show_loveit_button_on']['page']) ? $cce_options['show_loveit_button_on']['page'] : FALSE;
 		
-		if( is_singular('post') && $cce_options['show_loveit_button_on']['post'] ) $content .= $this->do_likes();
-		if( is_page() && !is_front_page() && $cce_options['show_loveit_button_on']['page'] ) $content .= $this->do_likes();
+		if( is_singular('post') && $show_on_posts ) $content .= $this->do_likes('loveit-after-content');
+		if( is_page() && !is_front_page() && $show_on_pages ) $content .= $this->do_likes('loveit-after-content');
 		
 		//Under consideration: if(( is_front_page() || is_home() || is_category() || is_tag() || is_author() || is_date() || is_search()) && $options['add_to_other'] ) $content .= $this->do_likes();
 		
@@ -156,8 +161,9 @@ class CCELoveIt {
 		return $this->do_likes();
 	}
 	
-	function do_likes() {
+	function do_likes($classes = null) {
 		global $post;
+		$classes = $classes ? ' ' . $classes : '';
 
         $cce_options = get_option('cce_options');
 		
@@ -171,7 +177,7 @@ class CCELoveIt {
 			$title = __('You already loved this!', 'cc');
 		}
 		
-		return '<span class="cce-loveit-wrapper"><span class="cce-loveit-prefix">' . $prefix_text . '</span><a href="#" class="'. $class .'" id="cce-loveit-'. $post->ID .'" title="'. $title .'">'. $output .'</a></span>';
+		return '<span class="cce-loveit-wrapper' . $classes . '"><span class="cce-loveit-prefix">' . $prefix_text . '</span><a href="#" class="'. $class .'" id="cce-loveit-'. $post->ID .'" title="'. $title .'">'. $output .'</a></span>';
 	}
 	
 }
