@@ -178,8 +178,9 @@ function cce_testimonial( $atts, $content = null ) {
 	), $atts, 'cce_testimonial' );
 	
 	$image = $args['image'] ? '<img src="' . esc_url($args['image']) . '" />' : FALSE;
+	$url = $args['url'] ? ' - <a href="' . esc_url($args['url']) . '">' . esc_url($args['url']) . '</a>' : FALSE;
 
-	return '<div class="cce-section cce-testimonial"><blockquote>' . wpautop( do_shortcode( $content ) )  . '<small><cite>' . $image . esc_attr($args['name']) . '</cite>' . esc_attr($args['subtitle']) . ' - <a href="' . esc_url($args['url']) . '">' . esc_url($args['url']) . '</a></small></blockquote></div>';
+	return '<div class="cce-section cce-testimonial"><blockquote>' . wpautop( do_shortcode( $content ) )  . '<small><cite>' . $image . esc_attr($args['name']) . '</cite>' . esc_attr($args['subtitle']) . $url . '</small></blockquote></div>';
 }
 endif;
 add_shortcode( 'cce_testimonial', 'cce_testimonial' );
