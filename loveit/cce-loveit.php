@@ -36,7 +36,7 @@ class CCELoveIt {
 		
 			global $cce;
 			wp_enqueue_style( 'cce-loveit', $cce->plugin_url() . '/assets/css/cce-loveit.css' );
-			wp_enqueue_script( 'cce-loveit', $cce->plugin_url() . '/assets/js/min/cce-loveit.min.js', array('jquery') );
+			wp_enqueue_script( 'cce-loveit', $cce->plugin_url() . '/assets/js/min/cce-loveit.min.js', array('jquery'), false, true );
 			wp_localize_script( 'cce-loveit', 'cce_loveit', array('ajaxurl' => admin_url('admin-ajax.php'), 'loved_text' => __( 'You already loved this!', 'cc' )) );
 		}
 	}
