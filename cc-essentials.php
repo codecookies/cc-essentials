@@ -261,7 +261,7 @@ class CCEssentials {
 	public function shortcode_css() {
 		
 		// Registering styles
-		wp_register_style( 'font-awesome', $this->plugin_url() . '/assets/css/font-awesome.min.css' , '', '4.6.0', 'all' );
+		wp_register_style( 'font-awesome', $this->plugin_url() . '/assets/css/font-awesome.min.css' , array(), '4.6.3' );
 		wp_register_style( 'cce-shortcode-styles', $this->plugin_url() . '/assets/css/cce-shortcodes.css' , array( 'font-awesome' ), $this->version, 'all' );
 
 		// Enqueuing styles

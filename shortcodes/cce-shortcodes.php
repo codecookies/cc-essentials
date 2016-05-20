@@ -18,7 +18,7 @@ class CCShortcodes {
 
 		wp_enqueue_style( 'font-awesome', $cce->plugin_url() . '/assets/css/font-awesome.min.css', '', '4.6.0' );
 
-		wp_register_script( 'font-awesome-icons-list', $cce->plugin_url() . '/assets/js/min/icons.min.js', array(), '4.6.0', true );
+		wp_register_script( 'font-awesome-icons-list', $cce->plugin_url() . '/assets/js/min/icons.min.js', array(), '4.6.3', true );
 		wp_enqueue_script( 'font-awesome-icons-list' );
 
 		wp_enqueue_script( 'jquery-ui-sortable' );
