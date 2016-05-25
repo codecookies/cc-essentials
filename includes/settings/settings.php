@@ -212,6 +212,12 @@ function cce_get_registered_settings() {
 						
 					)
 				),
+				'shortcode_template_tag' => array(
+					'id'   			=> 'shortcode_template_tag',
+					'name' 			=> __('Shortcode & Template tag usage', 'verve'),
+					'desc' 			=> '<p>'.__('To use ‘Love It!’ anywhere within your posts and pages you can use the shortcode:', 'verve').'</p><p><code>[cce_loveit]</code></p><p>' . __('To use ‘Love It!’ button manually in your theme template, use the following PHP code:', 'verve') . '</p><p><code>&lt;?php if( function_exists(\'cce_loveit\') ) cce_loveit(); ?&gt;</code></p><p>' . __('Note: All the settings below are applicable to LoveIt button inserted using the shortcode or the template tag.', 'verve') . '</p>',
+					'type' 			=> 'textblock'
+				),
 				'prefix_text' => array(
 					'id'   			=> 'prefix_text',
 					'name' 			=> __('Prefix text', 'verve'),
@@ -239,12 +245,6 @@ function cce_get_registered_settings() {
 					'placeholder' 	=> __('people loved this!', 'verve'),
 					'desc' 			=> __('The text after the count when more than one person has loved a post/page. Leave blank for no text after the count.', 'verve'),
 					'type' 			=> 'text'
-				),
-				'shortcode_template_tag' => array(
-					'id'   			=> 'shortcode_template_tag',
-					'name' 			=> __('Shortcode & Template tag usage', 'verve'),
-					'desc' 			=> '<p>'.__('To use ‘Love It!’ anywhere within your posts and pages you can use the shortcode:', 'verve').'</p><p><code>[cce_loveit]</code></p><p>' . __('To use ‘Love It!’ button manually in your theme template use the following PHP code:', 'verve') . '</p><p><code>&lt;?php if( function_exists(\'cce_loveit\') ) cce_loveit(); ?&gt;</code></p>',
-					'type' 			=> 'textblock'
 				)
 			)
 		),
