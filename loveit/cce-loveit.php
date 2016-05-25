@@ -104,17 +104,17 @@ class CCELoveIt {
 		if( isset($_POST['loves_id']) ) {
 		    // Click event. Get and Update Count
 			$post_id = str_replace('cce-loveit-', '', $_POST['loves_id']);
-			echo $this->love_this($post_id, $cce_options['suffix_text_zero'], $cce_options['suffix_text_one'], $cce_options['suffix_text_more'], 'update');
+			echo $this->cce_love_this($post_id, $cce_options['suffix_text_zero'], $cce_options['suffix_text_one'], $cce_options['suffix_text_more'], 'update');
 		} else {
 		    // AJAXing data in. Get Count
 			$post_id = str_replace('cce-loveit-', '', $_POST['post_id']);
-			echo $this->love_this($post_id, $cce_options['suffix_text_zero'], $cce_options['suffix_text_one'], $cce_options['suffix_text_more'], 'get');
+			echo $this->cce_love_this($post_id, $cce_options['suffix_text_zero'], $cce_options['suffix_text_one'], $cce_options['suffix_text_more'], 'get');
 		}
 		
 		exit;
 	}
 	
-	function love_this($post_id, $suffix_text_zero = false, $suffix_text_one = false, $suffix_text_more = false, $action = 'get') {
+	function cce_love_this($post_id, $suffix_text_zero = false, $suffix_text_one = false, $suffix_text_more = false, $action = 'get') {
 		if(!is_numeric($post_id)) return;
 		$suffix_text_zero = strip_tags($suffix_text_zero);
 		$suffix_text_one = strip_tags($suffix_text_one);
@@ -167,7 +167,7 @@ class CCELoveIt {
 
         $cce_options = get_option('cce_options');
 		
-		$output = $this->love_this($post->ID, $cce_options['suffix_text_zero'], $cce_options['suffix_text_one'], $cce_options['suffix_text_more']);
+		$output = $this->cce_love_this($post->ID, $cce_options['suffix_text_zero'], $cce_options['suffix_text_one'], $cce_options['suffix_text_more']);
   
   		$class = 'cce-loveit';
   		$title = __('Love this', 'cc');
@@ -210,6 +210,7 @@ class CCELoveIt_Widget extends WP_Widget {
 		$desc = $instance['description'];
 		$posts = empty( $instance['posts'] ) ? 1 : $instance['posts'];
 		$display_count = $instance['display_count'];
+		$display_suffix_prefix = $instance['display_suffix_prefix'];
 
 		// Output our widget
 		echo $before_widget;
@@ -228,11 +229,15 @@ class CCELoveIt_Widget extends WP_Widget {
 		$loved_posts = get_posts($loved_posts_args);
 
 		echo '<ul class="cce_most_loved_posts">';
+		
+		global $cce_options;
 		foreach( $loved_posts as $loved_post ) {
 			$count_output = '';
 			if( $display_count ) {
 				$count = get_post_meta( $loved_post->ID, '_cce_loves', true);
-				$count_output = " <span class='cce-loveit-count'>($count)</span>";
+				$prefix = ( $display_suffix_prefix && $cce_options['prefix_text'] ) ? $cce_options['prefix_text'].' ' : false;
+				$suffix = ( $display_suffix_prefix ) ? ( ('0' === $count) ? ' '.$cce_options['suffix_text_zero'] : (('1' === $count) ? ' '.$cce_options['suffix_text_one'] : ' '.$cce_options['suffix_text_more']) ) : false;
+				$count_output = " <span class='cce-loveit-count'>($prefix$count$suffix)</span>";
 			}
 			echo '<li><a href="' . get_permalink($loved_post->ID) . '">' . get_the_title($loved_post->ID) . '</a>' . $count_output . '</li>';
 		}
@@ -247,6 +252,7 @@ class CCELoveIt_Widget extends WP_Widget {
 		$instance['description'] = strip_tags($new_instance['description'], '<a><b><strong><i><em><span>');
 		$instance['posts'] = strip_tags($new_instance['posts']);
 		$instance['display_count'] = strip_tags($new_instance['display_count']);
+		$instance['display_suffix_prefix'] = strip_tags($new_instance['display_suffix_prefix']);
 
 		return $instance;
 	}
@@ -269,23 +275,29 @@ class CCELoveIt_Widget extends WP_Widget {
 		$description = $instance['description'];
 		$posts = $instance['posts'];
 		$display_count = $instance['display_count'];
+		$display_suffix_prefix = $instance['display_suffix_prefix'];
 		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label> 
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'cc'); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('description'); ?>"><?php _e('Description:'); ?></label> 
+			<label for="<?php echo $this->get_field_id('description'); ?>"><?php _e('Description:', 'cc'); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id('description'); ?>" name="<?php echo $this->get_field_name('description'); ?>" type="text" value="<?php echo $description; ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('posts'); ?>"><?php _e('Posts:'); ?></label> 
+			<label for="<?php echo $this->get_field_id('posts'); ?>"><?php _e('Posts:', 'cc'); ?></label> 
 			<input id="<?php echo $this->get_field_id('posts'); ?>" name="<?php echo $this->get_field_name('posts'); ?>" type="text" value="<?php echo $posts; ?>" size="3" />
 		</p>
 		<p>
 			<input id="<?php echo $this->get_field_id('display_count'); ?>" name="<?php echo $this->get_field_name('display_count'); ?>" type="checkbox" value="1" <?php checked( $display_count ); ?>>
-			<label for="<?php echo $this->get_field_id('display_count'); ?>"><?php _e('Display counts'); ?></label>
+			<label for="<?php echo $this->get_field_id('display_count'); ?>"><?php _e('Display counts', 'cc'); ?></label>
+		</p>
+		
+		<p>
+			<input id="<?php echo $this->get_field_id('display_suffix_prefix'); ?>" name="<?php echo $this->get_field_name('display_suffix_prefix'); ?>" type="checkbox" value="1" <?php checked( $display_suffix_prefix ); ?>>
+			<label for="<?php echo $this->get_field_id('display_suffix_prefix'); ?>"><?php echo sprintf(__('Display suffix & prefix %1$sEdit%2$s', 'cc'), '<small>(<a href="admin.php?page=cce">', '</a>)</small>' ); ?></label>
 		</p>
 
 		<?php
