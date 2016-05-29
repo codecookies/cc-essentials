@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CC Essentials\n"
-"POT-Creation-Date: 2016-05-29 00:15+0530\n"
-"PO-Revision-Date: 2016-05-29 00:18+0530\n"
+"POT-Creation-Date: 2016-05-29 23:24+0530\n"
+"PO-Revision-Date: 2016-05-29 23:24+0530\n"
 "Last-Translator: CodeCookies\n"
 "Language-Team: CodeCookies\n"
 "Language: en_US\n"
@@ -114,7 +114,7 @@ msgid "Love It! button"
 msgstr ""
 
 #: includes/settings/settings.php:88
-msgid "Social icons"
+msgid "Social buttons"
 msgstr ""
 
 #: includes/settings/settings.php:144
