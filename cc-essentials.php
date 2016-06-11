@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: CC Essentials
- * Plugin URI: https://wordpress.org/plugins/cce/
+ * Plugin URI: https://wordpress.org/plugins/cc-essentials/
  * Description: CodeCookies Essentials: A set of powerful tools like shortcodes, widgets and font-awesome icons to extend the functionality of your WordPress site.
  * Version: 1.0.0
  * Author: CodeCooki.es
