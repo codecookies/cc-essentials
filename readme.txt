@@ -8,7 +8,7 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-CodeCookies Essentials (CC Essentials): A set of powerful tools like shortcodes, widgets and font-awesome icons to extend the functionality of your WordPress site.
+CodeCookies Essentials: A set of powerful tools like shortcodes, widgets and font-awesome icons to extend the functionality of your WordPress site.
 
 == Description ==
 
@@ -22,7 +22,7 @@ Using CC Shortcodes, you can add HTML elements like buttons, labels, layout colu
 
 * Accordion Toggle
 * Button
-* Icon box (uses [Font Awesome](http://fortawesome.github.io/Font-Awesome/) icon-fonts )
+* Icon box (uses [Font Awesome](http://fontawesome.io/icons/) icon-fonts )
 * Notification bar
 * Tabbed content
 * Testimonial / quote
@@ -35,7 +35,7 @@ Using CC Shortcodes, you can add HTML elements like buttons, labels, layout colu
 * Horizontal divider
 * Google Maps with custom zoom and 5 predefined styles
 
-*Love It! button*
+**Love It! button**
 
 You will find LoveIt! button settings in the CC Settings section in your WordPress admin area. Enabling LoveIt! button on posts and pages will display a small heart icon along with the number of loves the post/page has received. You can optionally set a prefix and a suffix around the LoveIt! button. Some themes by CodeCooki.es choose to display the LoveIt! button in its own special way. You can also display your most loved posts via the 'Most Loved Posts' widget in the sidebar.  
 
