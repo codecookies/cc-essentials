@@ -17,7 +17,7 @@
 if ( ! function_exists( 'cce_toggle' ) ) :
 function cce_toggle( $atts, $content = null ) {
 	$args = shortcode_atts( array(
-		'title' => __( 'Title goes here', 'cc' ),
+		'title' => __( 'Title goes here', 'cc-essentials' ),
 		'state' => 'open',
 	), $atts, 'cce_toggle' );
 
@@ -156,7 +156,7 @@ endif;
 if ( ! function_exists( 'cce_tab' ) ) :
 function cce_tab( $atts, $content = null ) {
 	$args = shortcode_atts( array(
-		'title' => __( 'Tab', 'cc' )
+		'title' => __( 'Tab', 'cc-essentials' )
 	), $atts, 'cce_tab' );
 
 	return '<div id="cce-tab-'. sanitize_title( $args['title'] ) .'" class="cce-tab">'. do_shortcode( $content ) .'</div>';

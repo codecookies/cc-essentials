@@ -1,1168 +1,1137 @@
+# Translation of Development (trunk) in English (UK)
+# This file is distributed under the same license as the Development (trunk) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: CC Essentials\n"
-"POT-Creation-Date: 2016-05-29 23:24+0530\n"
-"PO-Revision-Date: 2016-05-29 23:24+0530\n"
-"Last-Translator: CodeCookies\n"
-"Language-Team: CodeCookies\n"
-"Language: en_US\n"
+"PO-Revision-Date: 2016-06-15 11:25+0530\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.5\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-WPHeader: cc-essentials.php\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.5\n"
+"Project-Id-Version: CC Essentials\n"
+"POT-Creation-Date: \n"
+"Last-Translator: CodeCookies\n"
+"Language-Team: CodeCookies\n"
+"Language: en_GB\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: assets/js/plugin-lang.php:5
 msgid "Insert CC Shortcodes"
-msgstr ""
+msgstr "Insert CC Shortcodes"
 
 #: assets/js/plugin-lang.php:6
 msgid "Content related"
-msgstr ""
+msgstr "Content related"
 
 #: assets/js/plugin-lang.php:7
 msgid "Accordion toggle"
-msgstr ""
+msgstr "Accordion toggle"
 
 #: assets/js/plugin-lang.php:8
 msgid "Button"
-msgstr ""
+msgstr "Button"
 
 #: assets/js/plugin-lang.php:9
 msgid "Icon box"
-msgstr ""
+msgstr "Icon box"
 
 #: assets/js/plugin-lang.php:10
 msgid "Notification"
-msgstr ""
+msgstr "Notification"
 
 #: assets/js/plugin-lang.php:11
 msgid "Tabbed content"
-msgstr ""
+msgstr "Tabbed content"
 
 #: assets/js/plugin-lang.php:12 shortcodes/config.php:300
 msgid "Testimonial / quote"
-msgstr ""
+msgstr "Testimonial / quote"
 
 #: assets/js/plugin-lang.php:13 shortcodes/config.php:364
 msgid "Layout columns"
-msgstr ""
+msgstr "Layout columns"
 
 #: assets/js/plugin-lang.php:14
 msgid "Typography related"
-msgstr ""
+msgstr "Typography related"
 
 #: assets/js/plugin-lang.php:15
 msgid "Dropcap"
-msgstr ""
+msgstr "Dropcap"
 
 #: assets/js/plugin-lang.php:16
 msgid "Lead paragraph"
-msgstr ""
+msgstr "Lead paragraph"
 
 #: assets/js/plugin-lang.php:17
 msgid "Label"
-msgstr ""
+msgstr "Label"
 
 #: assets/js/plugin-lang.php:18
 msgid "Misc. elements"
-msgstr ""
+msgstr "Misc. elements"
 
 #: assets/js/plugin-lang.php:19 shortcodes/config.php:513
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
 #: assets/js/plugin-lang.php:20 shortcodes/config.php:564
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: assets/js/plugin-lang.php:21
 msgid "Horizontal divider"
-msgstr ""
+msgstr "Horizontal divider"
 
 #: assets/js/plugin-lang.php:22
 msgid "Google map"
-msgstr ""
+msgstr "Google map"
 
-#: cc-essentials.php:110
+#: cc-essentials.php:109
 msgid "Configure"
-msgstr ""
+msgstr "Configure"
 
-#: cc-essentials.php:142
+#: cc-essentials.php:141
 msgid "CC Essentials - Settings"
-msgstr ""
+msgstr "CC Essentials - Settings"
 
 #. Plugin Name of the plugin/theme
-#: cc-essentials.php:142
+#: cc-essentials.php:141
 msgid "CC Essentials"
-msgstr ""
+msgstr "CC Essentials"
 
 #: includes/settings/settings.php:37
 msgid "CC Essentials – Settings"
-msgstr ""
+msgstr "CC Essentials – Settings"
 
 #: includes/settings/settings.php:87
 msgid "Love It! button"
-msgstr ""
+msgstr "Love It! button"
 
 #: includes/settings/settings.php:88
 msgid "Social buttons"
-msgstr ""
+msgstr "Social buttons"
 
 #: includes/settings/settings.php:144
 msgid "Settings Updated"
-msgstr ""
+msgstr "Settings Updated"
 
 #: includes/settings/settings.php:206
 msgid "Show ‘Love It!’ button on"
-msgstr ""
+msgstr "Show ‘Love It!’ button on"
 
 #: includes/settings/settings.php:207
 msgid "Specify where the ‘Love It!’ button should be displayed."
-msgstr ""
+msgstr "Specify where the ‘Love It!’ button should be displayed."
 
 #: includes/settings/settings.php:210
 msgid "Blog posts"
-msgstr ""
+msgstr "Blog posts"
 
 #: includes/settings/settings.php:211
 msgid "Pages"
-msgstr ""
+msgstr "Pages"
 
 #: includes/settings/settings.php:217
 msgid "Shortcode & Template tag usage"
-msgstr ""
+msgstr "Shortcode & Template tag usage"
 
 #: includes/settings/settings.php:218
-msgid ""
-"To use ‘Love It!’ anywhere within your posts and pages you can use the "
-"shortcode:"
-msgstr ""
+msgid "To use ‘Love It!’ anywhere within your posts and pages you can use the shortcode:"
+msgstr "To use ‘Love It!’ anywhere within your posts and pages you can use the shortcode:"
 
 #: includes/settings/settings.php:218
-msgid ""
-"To use ‘Love It!’ button manually in your theme template, use the following "
-"PHP code:"
-msgstr ""
+msgid "To use ‘Love It!’ button manually in your theme template, use the following PHP code:"
+msgstr "To use ‘Love It!’ button manually in your theme template, use the following PHP code:"
 
 #: includes/settings/settings.php:218
-msgid ""
-"Note: All the settings below are applicable to LoveIt button inserted using "
-"the shortcode or the template tag."
-msgstr ""
+msgid "Note: All the settings below are applicable to LoveIt button inserted using the shortcode or the template tag."
+msgstr "Note: All the settings below are applicable to LoveIt button inserted using the shortcode or the template tag."
 
 #: includes/settings/settings.php:223
 msgid "Prefix text"
-msgstr ""
+msgstr "Prefix text"
 
 #: includes/settings/settings.php:225
 msgid "The text before the icon. Leave blank for no text before the icon."
-msgstr ""
+msgstr "The text before the icon. Leave blank for no text before the icon."
 
 #: includes/settings/settings.php:230
 msgid "Suffix text when no loves received"
-msgstr ""
+msgstr "Suffix text when no loves received"
 
 #: includes/settings/settings.php:231
 msgid "No loves yet!"
-msgstr ""
+msgstr "No loves yet!"
 
 #: includes/settings/settings.php:232
-msgid ""
-"The text after the count when no one has loved a post/page. Leave blank for "
-"no text after the count."
-msgstr ""
+msgid "The text after the count when no one has loved a post/page. Leave blank for no text after the count."
+msgstr "The text after the count when no one has loved a post/page. Leave blank for no text after the count."
 
 #: includes/settings/settings.php:237
 msgid "Suffix text when 1 love received"
-msgstr ""
+msgstr "Suffix text when 1 love received"
 
 #: includes/settings/settings.php:238
 msgid "person loved this!"
-msgstr ""
+msgstr "person loved this!"
 
 #: includes/settings/settings.php:239
-msgid ""
-"The text after the count when one person has loved a post/page. Leave blank "
-"for no text after the count."
-msgstr ""
+msgid "The text after the count when one person has loved a post/page. Leave blank for no text after the count."
+msgstr "The text after the count when one person has loved a post/page. Leave blank for no text after the count."
 
 #: includes/settings/settings.php:244
 msgid "Suffix text when more than 1 loves received"
-msgstr ""
+msgstr "Suffix text when more than 1 loves received"
 
 #: includes/settings/settings.php:245
 msgid "people loved this!"
-msgstr ""
+msgstr "people loved this!"
 
 #: includes/settings/settings.php:246
-msgid ""
-"The text after the count when more than one person has loved a post/page. "
-"Leave blank for no text after the count."
-msgstr ""
+msgid "The text after the count when more than one person has loved a post/page. Leave blank for no text after the count."
+msgstr "The text after the count when more than one person has loved a post/page. Leave blank for no text after the count."
 
 #: includes/settings/settings.php:402
-#, php-format
-msgid ""
-"The callback function used for the <strong>%s</strong> setting is missing."
-msgstr ""
+msgid "The callback function used for the <strong>%s</strong> setting is missing."
+msgstr "The callback function used for the <strong>%s</strong> setting is missing."
 
 #: includes/tinymce.php:117
 msgid "Run In"
-msgstr ""
+msgstr "Run In"
 
 #: includes/tinymce.php:122
 msgid "Alert"
-msgstr ""
+msgstr "Alert"
 
 #: includes/tinymce.php:125 shortcodes/config.php:82 shortcodes/config.php:477
 msgid "Green"
-msgstr ""
+msgstr "Green"
 
 #: includes/tinymce.php:132 shortcodes/config.php:81 shortcodes/config.php:476
 msgid "Red"
-msgstr ""
+msgstr "Red"
 
 #: includes/tinymce.php:139 shortcodes/config.php:83 shortcodes/config.php:478
 msgid "Yellow"
-msgstr ""
+msgstr "Yellow"
 
 #: includes/tinymce.php:146 shortcodes/config.php:84 shortcodes/config.php:480
 msgid "Blue"
-msgstr ""
+msgstr "Blue"
 
 #: includes/tinymce.php:153
 msgid "Grey"
-msgstr ""
+msgstr "Grey"
 
 #: includes/tinymce.php:229
 msgid "Insert Horizontal Line"
-msgstr ""
+msgstr "Insert Horizontal Line"
 
 #: includes/tinymce.php:230
 msgid "Horizontal line"
-msgstr ""
+msgstr "Horizontal line"
 
 #: includes/tinymce.php:231
 msgid "Style"
-msgstr ""
+msgstr "Style"
 
 #: includes/tinymce.php:232
 msgid "Plain"
-msgstr ""
+msgstr "Plain"
 
 #: includes/tinymce.php:233
 msgid "Strong"
-msgstr ""
+msgstr "Strong"
 
 #: includes/tinymce.php:234 shortcodes/config.php:585
 msgid "Double"
-msgstr ""
+msgstr "Double"
 
 #: includes/tinymce.php:235
 msgid "Dashed"
-msgstr ""
+msgstr "Dashed"
 
 #: includes/tinymce.php:236
 msgid "Dotted"
-msgstr ""
+msgstr "Dotted"
 
 #: loveit/cce-loveit.php:40 loveit/cce-loveit.php:177
 msgid "You already loved this!"
-msgstr ""
+msgstr "You already loved this!"
 
 #: loveit/cce-loveit.php:85
 msgid "Loves received"
-msgstr ""
+msgstr "Loves received"
 
 #: loveit/cce-loveit.php:93
 msgid "loves"
-msgstr ""
+msgstr "loves"
 
 #: loveit/cce-loveit.php:95
 msgid "0 loves"
-msgstr ""
+msgstr "0 loves"
 
 #: loveit/cce-loveit.php:173
 msgid "Love this"
-msgstr ""
+msgstr "Love this"
 
 #: loveit/cce-loveit.php:203
 msgid "CC - Most Loved Posts"
-msgstr ""
+msgstr "CC - Most Loved Posts"
 
 #: loveit/cce-loveit.php:203
 msgid "Displays most loved posts in descending order."
-msgstr ""
+msgstr "Displays most loved posts in descending order."
 
 #: loveit/cce-loveit.php:266
 msgid "Most loved posts"
-msgstr ""
+msgstr "Most loved posts"
 
 #: loveit/cce-loveit.php:282
 msgid "Title:"
-msgstr ""
+msgstr "Title:"
 
 #: loveit/cce-loveit.php:286
 msgid "Description:"
-msgstr ""
+msgstr "Description:"
 
 #: loveit/cce-loveit.php:290
 msgid "Posts:"
-msgstr ""
+msgstr "Posts:"
 
 #: loveit/cce-loveit.php:295
 msgid "Display counts"
-msgstr ""
+msgstr "Display counts"
 
 #: loveit/cce-loveit.php:300
-#, php-format
 msgid "Display suffix & prefix %1$sEdit%2$s"
-msgstr ""
+msgstr "Display suffix & prefix %1$sEdit%2$s"
 
 #: shortcodes/cce-shortcodes.php:33
 msgid "Upload or select a video"
-msgstr ""
+msgstr "Upload or select a video"
 
 #: shortcodes/cce-shortcodes.php:34
 msgid "Upload or select an image"
-msgstr ""
+msgstr "Upload or select an image"
 
 #: shortcodes/cce-shortcodes.php:99
 msgid "Insert Shortcode"
-msgstr ""
+msgstr "Insert Shortcode"
 
 #: shortcodes/config.php:23
 msgid "Toggle title"
-msgstr ""
+msgstr "Toggle title"
 
 #: shortcodes/config.php:24
 msgid "Add a title for the toggle content."
-msgstr ""
+msgstr "Add a title for the toggle content."
 
 #: shortcodes/config.php:30
 msgid "Toggle content"
-msgstr ""
+msgstr "Toggle content"
 
 #: shortcodes/config.php:31
 msgid "Add the toggle content (HTML is allowed)."
-msgstr ""
+msgstr "Add the toggle content (HTML is allowed)."
 
 #: shortcodes/config.php:35
 msgid "Initial state"
-msgstr ""
+msgstr "Initial state"
 
 #: shortcodes/config.php:36
 msgid "Choose whether the toggle is open or closed on page load."
-msgstr ""
+msgstr "Choose whether the toggle is open or closed on page load."
 
 #: shortcodes/config.php:38
 msgid "Open"
-msgstr ""
+msgstr "Open"
 
 #: shortcodes/config.php:39
 msgid "Closed"
-msgstr ""
+msgstr "Closed"
 
 #: shortcodes/config.php:44
 msgid "Accordion toggle settings"
-msgstr ""
+msgstr "Accordion toggle settings"
 
 #: shortcodes/config.php:56
 msgid "Button text"
-msgstr ""
+msgstr "Button text"
 
 #: shortcodes/config.php:57
 msgid "The text that appears on the button."
-msgstr ""
+msgstr "The text that appears on the button."
 
 #: shortcodes/config.php:62
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: shortcodes/config.php:63
-msgid ""
-"Link to navigate to upon clicking the button. For e.g. http://google.com"
-msgstr ""
+msgid "Link to navigate to upon clicking the button. For e.g. http://google.com"
+msgstr "Link to navigate to upon clicking the button. For e.g. http://google.com"
 
 #: shortcodes/config.php:67
 msgid "Open in a new tab/window?"
-msgstr ""
+msgstr "Open in a new tab/window?"
 
 #: shortcodes/config.php:68
 msgid "Should the link be opened in a new window or tab?"
-msgstr ""
+msgstr "Should the link be opened in a new window or tab?"
 
 #: shortcodes/config.php:71
 msgid "No, open link in the same tab/window"
-msgstr ""
+msgstr "No, open link in the same tab/window"
 
 #: shortcodes/config.php:72
 msgid "Yes, open link in a new tab/window"
-msgstr ""
+msgstr "Yes, open link in a new tab/window"
 
 #: shortcodes/config.php:77 shortcodes/config.php:472
 msgid "Color"
-msgstr ""
+msgstr "Colour"
 
 #: shortcodes/config.php:78
 msgid "Pick a background color for the button."
-msgstr ""
+msgstr "Pick a background colour for the button."
 
 #: shortcodes/config.php:85 shortcodes/config.php:479
 msgid "Black"
-msgstr ""
+msgstr "Black"
 
 #: shortcodes/config.php:86
 msgid "White"
-msgstr ""
+msgstr "White"
 
 #: shortcodes/config.php:87 shortcodes/config.php:481
 msgid "Gray"
-msgstr ""
+msgstr "Grey"
 
 #: shortcodes/config.php:88
 msgid "As per theme"
-msgstr ""
+msgstr "As per theme"
 
 #: shortcodes/config.php:93
 msgid "Size"
-msgstr ""
+msgstr "Size"
 
 #: shortcodes/config.php:94
 msgid "Choose the size of the button."
-msgstr ""
+msgstr "Choose the size of the button."
 
 #: shortcodes/config.php:97
 msgid "Small"
-msgstr ""
+msgstr "Small"
 
 #: shortcodes/config.php:98
 msgid "Medium"
-msgstr ""
+msgstr "Medium"
 
 #: shortcodes/config.php:99 shortcodes/config.php:412
 msgid "Large"
-msgstr ""
+msgstr "Large"
 
 #: shortcodes/config.php:104 shortcodes/config.php:397
 #: shortcodes/config.php:486
 msgid "Shape"
-msgstr ""
+msgstr "Shape"
 
 #: shortcodes/config.php:105
 msgid "Choose the shape of the button."
-msgstr ""
+msgstr "Choose the shape of the button."
 
 #: shortcodes/config.php:106 shortcodes/config.php:488
 msgid "rounded"
-msgstr ""
+msgstr "rounded"
 
 #: shortcodes/config.php:108 shortcodes/config.php:490
 msgid "Rounded"
-msgstr ""
+msgstr "Rounded"
 
 #: shortcodes/config.php:109 shortcodes/config.php:402
 #: shortcodes/config.php:491
 msgid "Square"
-msgstr ""
+msgstr "Square"
 
 #: shortcodes/config.php:110 shortcodes/config.php:492
 msgid "Oval"
-msgstr ""
+msgstr "Oval"
 
 #: shortcodes/config.php:116 shortcodes/config.php:154
 msgid "Icon"
-msgstr ""
+msgstr "Icon"
 
 #: shortcodes/config.php:117
 msgid "Choose an icon (optional)."
-msgstr ""
+msgstr "Choose an icon (optional)."
 
 #: shortcodes/config.php:121
 msgid "Icon placement"
-msgstr ""
+msgstr "Icon placement"
 
 #: shortcodes/config.php:122
 msgid "Choose whether the icon be displayed before or after the button text."
-msgstr ""
+msgstr "Choose whether the icon be displayed before or after the button text."
 
 #: shortcodes/config.php:125
 msgid "Before text"
-msgstr ""
+msgstr "Before text"
 
 #: shortcodes/config.php:126
 msgid "After text"
-msgstr ""
+msgstr "After text"
 
 #: shortcodes/config.php:131 shortcodes/config.php:534
 msgid "Alignment"
-msgstr ""
+msgstr "Alignment"
 
 #: shortcodes/config.php:132
 msgid "Choose the alignment of the button."
-msgstr ""
+msgstr "Choose the alignment of the button."
 
 #: shortcodes/config.php:133
 msgid "none"
-msgstr ""
+msgstr "none"
 
 #: shortcodes/config.php:135 shortcodes/config.php:538
 #: shortcodes/config.php:642
 msgid "None"
-msgstr ""
+msgstr "None"
 
 #: shortcodes/config.php:136 shortcodes/config.php:179
 #: shortcodes/config.php:259 shortcodes/config.php:539
 msgid "Left"
-msgstr ""
+msgstr "Left"
 
 #: shortcodes/config.php:137 shortcodes/config.php:541
 msgid "Right"
-msgstr ""
+msgstr "Right"
 
 #: shortcodes/config.php:142
 msgid "Button settings"
-msgstr ""
+msgstr "Button settings"
 
 #: shortcodes/config.php:155
 msgid "Choose an icon."
-msgstr ""
+msgstr "Choose an icon."
 
 #: shortcodes/config.php:159
 msgid "Icon size"
-msgstr ""
+msgstr "Icon size"
 
 #: shortcodes/config.php:160
 msgid "Select the appropriate size of the icon."
-msgstr ""
+msgstr "Select the appropriate size of the icon."
 
 #: shortcodes/config.php:163
 msgid "32px"
-msgstr ""
+msgstr "32px"
 
 #: shortcodes/config.php:164
 msgid "48px"
-msgstr ""
+msgstr "48px"
 
 #: shortcodes/config.php:165
 msgid "64px"
-msgstr ""
+msgstr "64px"
 
 #: shortcodes/config.php:166
 msgid "72px"
-msgstr ""
+msgstr "72px"
 
 #: shortcodes/config.php:167
 msgid "96px"
-msgstr ""
+msgstr "96px"
 
 #: shortcodes/config.php:168
 msgid "128px"
-msgstr ""
+msgstr "128px"
 
 #: shortcodes/config.php:169
 msgid "164px"
-msgstr ""
+msgstr "164px"
 
 #: shortcodes/config.php:170
 msgid "192px"
-msgstr ""
+msgstr "192px"
 
 #: shortcodes/config.php:175
 msgid "Icon position"
-msgstr ""
+msgstr "Icon position"
 
 #: shortcodes/config.php:176
 msgid "Choose the position of the icon."
-msgstr ""
+msgstr "Choose the position of the icon."
 
 #: shortcodes/config.php:180 shortcodes/config.php:258
 msgid "Top"
-msgstr ""
+msgstr "Top"
 
 #: shortcodes/config.php:186
 msgid "Title"
-msgstr ""
+msgstr "Title"
 
 #: shortcodes/config.php:187
 msgid "Give a title to the icon-box."
-msgstr ""
+msgstr "Give a title to the icon-box."
 
 #: shortcodes/config.php:192
 msgid "Content"
-msgstr ""
+msgstr "Content"
 
 #: shortcodes/config.php:193
 msgid "Enter the content of the icon-box."
-msgstr ""
+msgstr "Enter the content of the icon-box."
 
 #: shortcodes/config.php:198
 msgid "Icon-box settings"
-msgstr ""
+msgstr "Icon-box settings"
 
 #: shortcodes/config.php:209
 msgid "Notification type"
-msgstr ""
+msgstr "Notification type"
 
 #: shortcodes/config.php:210
 msgid "Choose the type of notification."
-msgstr ""
+msgstr "Choose the type of notification."
 
 #: shortcodes/config.php:213
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: shortcodes/config.php:214
 msgid "Success"
-msgstr ""
+msgstr "Success"
 
 #: shortcodes/config.php:215
 msgid "Warning"
-msgstr ""
+msgstr "Warning"
 
 #: shortcodes/config.php:216
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 #: shortcodes/config.php:222
 msgid "Notification title (optional)"
-msgstr ""
+msgstr "Notification title (optional)"
 
 #: shortcodes/config.php:223
 msgid "The title of the notification message."
-msgstr ""
+msgstr "The title of the notification message."
 
 #: shortcodes/config.php:228
 msgid "Notification message"
-msgstr ""
+msgstr "Notification message"
 
 #: shortcodes/config.php:229
 msgid "The content of the notification message."
-msgstr ""
+msgstr "The content of the notification message."
 
 #: shortcodes/config.php:233
 msgid "Show close button?"
-msgstr ""
+msgstr "Show close button?"
 
 #: shortcodes/config.php:234
 msgid "Should the notification box show the close (X) button?"
-msgstr ""
+msgstr "Should the notification box show the close (X) button?"
 
 #: shortcodes/config.php:237
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: shortcodes/config.php:238
 msgid "Yes"
-msgstr ""
+msgstr "Yes"
 
 #: shortcodes/config.php:243
 msgid "Notification settings"
-msgstr ""
+msgstr "Notification settings"
 
 #: shortcodes/config.php:254
 msgid "Position of tabs"
-msgstr ""
+msgstr "Position of tabs"
 
 #: shortcodes/config.php:255
 msgid "Select the placement direction of the tabs."
-msgstr ""
+msgstr "Select the placement direction of the tabs."
 
 #: shortcodes/config.php:256
 msgid "top"
-msgstr ""
+msgstr "top"
 
 #: shortcodes/config.php:268
 msgid "Tab title"
-msgstr ""
+msgstr "Tab title"
 
 #: shortcodes/config.php:269
 msgid "Set a title of this tab."
-msgstr ""
+msgstr "Set a title of this tab."
 
 #: shortcodes/config.php:274
 msgid "Tab Content"
-msgstr ""
+msgstr "Tab Content"
 
 #: shortcodes/config.php:275
 msgid "Add content to this tab."
-msgstr ""
+msgstr "Add content to this tab."
 
 #: shortcodes/config.php:279
 msgid "Add a tab"
-msgstr ""
+msgstr "Add a tab"
 
 #: shortcodes/config.php:282
 msgid "Tabbed content settings"
-msgstr ""
+msgstr "Tabbed content settings"
 
 #: shortcodes/config.php:294
 msgid "Author’s name"
-msgstr ""
+msgstr "Author’s name"
 
 #: shortcodes/config.php:295
 msgid "Enter the author&rsquo;s name."
-msgstr ""
+msgstr "Enter the author&rsquo;s name."
 
 #: shortcodes/config.php:301
 msgid "The actual testimonial/quotation."
-msgstr ""
+msgstr "The actual testimonial/quotation."
 
 #: shortcodes/config.php:306
 msgid "Author’s image (optional)"
-msgstr ""
+msgstr "Author’s image (optional)"
 
 #: shortcodes/config.php:307
 msgid "Link to the JPG/PNG image file."
-msgstr ""
+msgstr "Link to the JPG/PNG image file."
 
 #: shortcodes/config.php:312
 msgid "Subtitle (optional)"
-msgstr ""
+msgstr "Subtitle (optional)"
 
 #: shortcodes/config.php:313
 msgid "A small description about the author. For eg. Founder & CEO, Google."
-msgstr ""
+msgstr "A small description about the author. For eg. Founder & CEO, Google."
 
 #: shortcodes/config.php:318
 msgid "URL (optional)"
-msgstr ""
+msgstr "URL (optional)"
 
 #: shortcodes/config.php:319
 msgid "Link to author&rsquo;s site."
-msgstr ""
+msgstr "Link to author&rsquo;s site."
 
 #: shortcodes/config.php:323
 msgid "Testimonial / quote settings"
-msgstr ""
+msgstr "Testimonial / quote settings"
 
 #: shortcodes/config.php:338
 msgid "Column type"
-msgstr ""
+msgstr "Column type"
 
 #: shortcodes/config.php:339
 msgid "Choose the type of the column based on its width."
-msgstr ""
+msgstr "Choose the type of the column based on its width."
 
 #: shortcodes/config.php:341
 msgid "One Third"
-msgstr ""
+msgstr "One Third"
 
 #: shortcodes/config.php:342
 msgid "One Third Last"
-msgstr ""
+msgstr "One Third Last"
 
 #: shortcodes/config.php:343
 msgid "Two Thirds"
-msgstr ""
+msgstr "Two Thirds"
 
 #: shortcodes/config.php:344
 msgid "Two Thirds Last"
-msgstr ""
+msgstr "Two Thirds Last"
 
 #: shortcodes/config.php:345
 msgid "One Half"
-msgstr ""
+msgstr "One Half"
 
 #: shortcodes/config.php:346
 msgid "One Half Last"
-msgstr ""
+msgstr "One Half Last"
 
 #: shortcodes/config.php:347
 msgid "One Fourth"
-msgstr ""
+msgstr "One Fourth"
 
 #: shortcodes/config.php:348
 msgid "One Fourth Last"
-msgstr ""
+msgstr "One Fourth Last"
 
 #: shortcodes/config.php:349
 msgid "Three Fourth"
-msgstr ""
+msgstr "Three Fourth"
 
 #: shortcodes/config.php:350
 msgid "Three Fourth Last"
-msgstr ""
+msgstr "Three Fourth Last"
 
 #: shortcodes/config.php:356
 msgid "Column content"
-msgstr ""
+msgstr "Column content"
 
 #: shortcodes/config.php:357
 msgid "Add content for this column."
-msgstr ""
+msgstr "Add content for this column."
 
 #: shortcodes/config.php:361
 msgid "Add column"
-msgstr ""
+msgstr "Add column"
 
 #: shortcodes/config.php:380
 msgid "Dropcap letter"
-msgstr ""
+msgstr "Dropcap letter"
 
 #: shortcodes/config.php:381
-msgid ""
-"Specify the letter to be dropcapped. Usually this is the first letter of a "
-"paragraph."
-msgstr ""
+msgid "Specify the letter to be dropcapped. Usually this is the first letter of a paragraph."
+msgstr "Specify the letter to be dropcapped. Usually this is the first letter of a paragraph."
 
 #: shortcodes/config.php:386
 msgid "Background color"
-msgstr ""
+msgstr "Background colour"
 
 #: shortcodes/config.php:387
 msgid "Select the background color for the dropcap letter."
-msgstr ""
+msgstr "Select the background colour for the dropcap letter."
 
 #: shortcodes/config.php:392
 msgid "Text color"
-msgstr ""
+msgstr "Text colour"
 
 #: shortcodes/config.php:393
 msgid "Select the foreground (text) color for the dropcap letter."
-msgstr ""
+msgstr "Select the foreground (text) colour for the dropcap letter."
 
 #: shortcodes/config.php:398
 msgid "Select the shape of the background."
-msgstr ""
+msgstr "Select the shape of the background."
 
 #: shortcodes/config.php:401
 msgid "Round"
-msgstr ""
+msgstr "Round"
 
 #: shortcodes/config.php:407 shortcodes/config.php:437
 msgid "Font size"
-msgstr ""
+msgstr "Font size"
 
 #: shortcodes/config.php:408
 msgid "Choose a font-size for the dropcap letter."
-msgstr ""
+msgstr "Choose a font-size for the dropcap letter."
 
 #: shortcodes/config.php:411
 msgid "Big"
-msgstr ""
+msgstr "Big"
 
 #: shortcodes/config.php:413
 msgid "Huge"
-msgstr ""
+msgstr "Huge"
 
 #: shortcodes/config.php:414
 msgid "Massive"
-msgstr ""
+msgstr "Massive"
 
 #: shortcodes/config.php:415
 msgid "Are you crazy? :O"
-msgstr ""
+msgstr "Are you crackers? :O"
 
 #: shortcodes/config.php:420
 msgid "Dropcap settings"
-msgstr ""
+msgstr "Dropcap settings"
 
 #: shortcodes/config.php:432
 msgid "Paragraph content"
-msgstr ""
+msgstr "Paragraph content"
 
 #: shortcodes/config.php:433
 msgid "Write the content of the paragraph here."
-msgstr ""
+msgstr "Write the content of the paragraph here."
 
 #: shortcodes/config.php:438
-msgid ""
-"Select how large the font-size of this paragraph should be compared to the "
-"rest of the content."
-msgstr ""
+msgid "Select how large the font-size of this paragraph should be compared to the rest of the content."
+msgstr "Select how large the font-size of this paragraph should be compared to the rest of the content."
 
 #: shortcodes/config.php:441
 msgid "25% larger"
-msgstr ""
+msgstr "25% larger"
 
 #: shortcodes/config.php:442
 msgid "50% larger"
-msgstr ""
+msgstr "50% larger"
 
 #: shortcodes/config.php:443
 msgid "60% larger"
-msgstr ""
+msgstr "60% larger"
 
 #: shortcodes/config.php:444
 msgid "75% larger"
-msgstr ""
+msgstr "75% larger"
 
 #: shortcodes/config.php:445
 msgid "100% larger"
-msgstr ""
+msgstr "100% larger"
 
 #: shortcodes/config.php:451
 msgid "Text color (optional)"
-msgstr ""
+msgstr "Text colour (optional)"
 
 #: shortcodes/config.php:452
 msgid "Select the text-color for the paragraph."
-msgstr ""
+msgstr "Select the text-colour for the paragraph."
 
 #: shortcodes/config.php:456
 msgid "Lead paragraph settings"
-msgstr ""
+msgstr "Lead paragraph settings"
 
 #: shortcodes/config.php:467
 msgid "Label text"
-msgstr ""
+msgstr "Label text"
 
 #: shortcodes/config.php:468
 msgid "Enter text to be shown as label."
-msgstr ""
+msgstr "Enter text to be shown as label."
 
 #: shortcodes/config.php:473
 msgid "Choose the color of the label."
-msgstr ""
+msgstr "Choose the colour of the label."
 
 #: shortcodes/config.php:487
 msgid "Choose the shape of the label."
-msgstr ""
+msgstr "Choose the shape of the label."
 
 #: shortcodes/config.php:497
 msgid "Label settings"
-msgstr ""
+msgstr "Label settings"
 
 #: shortcodes/config.php:514
 msgid "Choose an image."
-msgstr ""
+msgstr "Choose an image."
 
 #: shortcodes/config.php:518
 msgid "Effect"
-msgstr ""
+msgstr "Effect"
 
 #: shortcodes/config.php:519
 msgid "This uses CSS3 filters which may not work on older browsers."
-msgstr ""
+msgstr "This uses CSS3 filters which may not work on older browsers."
 
 #: shortcodes/config.php:522
 msgid "No filter"
-msgstr ""
+msgstr "No filter"
 
 #: shortcodes/config.php:523 shortcodes/config.php:646
 msgid "Grayscale"
-msgstr ""
+msgstr "Greyscale"
 
 #: shortcodes/config.php:524
 msgid "Sepia"
-msgstr ""
+msgstr "Sepia"
 
 #: shortcodes/config.php:525
 msgid "Blur"
-msgstr ""
+msgstr "Blur"
 
 #: shortcodes/config.php:526
 msgid "Hue Rotate"
-msgstr ""
+msgstr "Hue Rotate"
 
 #: shortcodes/config.php:527
 msgid "Contrast"
-msgstr ""
+msgstr "Contrast"
 
 #: shortcodes/config.php:528
 msgid "Brightness"
-msgstr ""
+msgstr "Brightness"
 
 #: shortcodes/config.php:529
 msgid "Invert"
-msgstr ""
+msgstr "Invert"
 
 #: shortcodes/config.php:535
 msgid "Choose the alignment of the image."
-msgstr ""
+msgstr "Choose the alignment of the image."
 
 #: shortcodes/config.php:540
 msgid "Center"
-msgstr ""
+msgstr "Center"
 
 #: shortcodes/config.php:547
 msgid "URL (Optional)"
-msgstr ""
+msgstr "URL (Optional)"
 
 #: shortcodes/config.php:548
 msgid "Link to navigate to upon clicking the image. For e.g. http://google.com"
-msgstr ""
+msgstr "Link to navigate to upon clicking the image. For e.g. http://google.com"
 
 #: shortcodes/config.php:552
 msgid "Insert an image"
-msgstr ""
+msgstr "Insert an image"
 
 #: shortcodes/config.php:565
-#, php-format
-msgid ""
-"Upload a video or choose an existing video from the Media Library. You can "
-"also paste a video link from sites like Youtube, Vimeo, TED, etc. Full list "
-"of supported sites can be found <a target=\"_blank\" href=\"%1$s\">here</a>."
-msgstr ""
+msgid "Upload a video or choose an existing video from the Media Library. You can also paste a video link from sites like Youtube, Vimeo, TED, etc. Full list of supported sites can be found <a target=\"_blank\" href=\"%1$s\">here</a>."
+msgstr "Upload a video or choose an existing video from the Media Library. You can also paste a video link from sites like Youtube, Vimeo, TED, etc. Full list of supported sites can be found <a target=\"_blank\" href=\"%1$s\">here</a>."
 
 #: shortcodes/config.php:569
 msgid "Insert a video"
-msgstr ""
+msgstr "Insert a video"
 
 #: shortcodes/config.php:580
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: shortcodes/config.php:581
 msgid "Select the type of the horizontal divider."
-msgstr ""
+msgstr "Select the type of the horizontal divider."
 
 #: shortcodes/config.php:582
 msgid "single"
-msgstr ""
+msgstr "single"
 
 #: shortcodes/config.php:584
 msgid "Single"
-msgstr ""
+msgstr "Single"
 
 #: shortcodes/config.php:586
 msgid "Single-dashed"
-msgstr ""
+msgstr "Single-dashed"
 
 #: shortcodes/config.php:587
 msgid "Double-dashed"
-msgstr ""
+msgstr "Double-dashed"
 
 #: shortcodes/config.php:588
 msgid "Single-dotted"
-msgstr ""
+msgstr "Single-dotted"
 
 #: shortcodes/config.php:589
 msgid "Double-dotted"
-msgstr ""
+msgstr "Double-dotted"
 
 #: shortcodes/config.php:594
 msgid "Length"
-msgstr ""
+msgstr "Length"
 
 #: shortcodes/config.php:595
 msgid "Select the length of the horizontal divider."
-msgstr ""
+msgstr "Select the length of the horizontal divider."
 
 #: shortcodes/config.php:596
 msgid "long"
-msgstr ""
+msgstr "long"
 
 #: shortcodes/config.php:598
 msgid "Long"
-msgstr ""
+msgstr "Long"
 
 #: shortcodes/config.php:599
 msgid "Short"
-msgstr ""
+msgstr "Short"
 
 #: shortcodes/config.php:604
 msgid "Horizontal divider settings"
-msgstr ""
+msgstr "Horizontal divider settings"
 
 #: shortcodes/config.php:615
 msgid "Latitude / Longitude"
-msgstr ""
+msgstr "Latitude / Longitude"
 
 #: shortcodes/config.php:616
 msgid "Drag and drop the map marker to select the exact location."
-msgstr ""
+msgstr "Drag and drop the map marker to select the exact location."
 
 #: shortcodes/config.php:621
 msgid "Width"
-msgstr ""
+msgstr "Width"
 
 #: shortcodes/config.php:622
 msgid "Enter the width of the map in px, em or %. Default is <i>100%</i>."
-msgstr ""
+msgstr "Enter the width of the map in px, em or %. Default is <i>100%</i>."
 
 #: shortcodes/config.php:627
 msgid "Height"
-msgstr ""
+msgstr "Height"
 
 #: shortcodes/config.php:628
 msgid "Enter the width of the map in px, em or %. Default is <i>350px</i>."
-msgstr ""
+msgstr "Enter the width of the map in px, em or %. Default is <i>350px</i>."
 
 #: shortcodes/config.php:633
 msgid "Zoom level"
-msgstr ""
+msgstr "Zoom level"
 
 #: shortcodes/config.php:634
 msgid "Enter the map zoom level between 0-21. Default is <i>15</i>."
-msgstr ""
+msgstr "Enter the map zoom level between 0-21. Default is <i>15</i>."
 
 #: shortcodes/config.php:639
 msgid "Map style"
-msgstr ""
+msgstr "Map style"
 
 #: shortcodes/config.php:640
 msgid "Choose a map style."
-msgstr ""
+msgstr "Choose a map style."
 
 #: shortcodes/config.php:643
 msgid "Pale Dawn"
-msgstr ""
+msgstr "Pale Dawn"
 
 #: shortcodes/config.php:644
 msgid "Subtle Grayscale"
-msgstr ""
+msgstr "Subtle Greyscale"
 
 #: shortcodes/config.php:645
 msgid "Bright & Bubbly"
-msgstr ""
+msgstr "Bright & Bubbly"
 
 #: shortcodes/config.php:647
 msgid "Mixed"
-msgstr ""
+msgstr "Mixed"
 
 #: shortcodes/config.php:652
 msgid "Insert a Google map"
-msgstr ""
+msgstr "Insert a Google map"
 
 #: shortcodes/shortcode-class.php:24
 msgid "Configuration file does not exist."
-msgstr ""
+msgstr "Configuration file does not exist."
 
 #: shortcodes/shortcode-class.php:122
 msgid "Choose Image"
-msgstr ""
+msgstr "Choose Image"
 
 #: shortcodes/shortcode-class.php:130
 msgid "Choose Video"
-msgstr ""
+msgstr "Choose Video"
 
 #: shortcodes/shortcode-class.php:148
 msgid "Enter a location"
-msgstr ""
+msgstr "Enter a location"
 
 #: shortcodes/shortcodes.php:20
 msgid "Title goes here"
-msgstr ""
+msgstr "Title goes here"
 
 #: shortcodes/shortcodes.php:159
 msgid "Tab"
-msgstr ""
+msgstr "Tab"
 
 #. Plugin URI of the plugin/theme
-msgid "https://wordpress.org/plugins/cce/"
-msgstr ""
+msgid "https://wordpress.org/plugins/cc-essentials/"
+msgstr "https://wordpress.org/plugins/cc-essentials/"
 
 #. Description of the plugin/theme
-msgid ""
-"CodeCookies Essentials: A set of powerful tools like shortcodes, widgets and "
-"font-awesome icons to extend the functionality of your WordPress site."
-msgstr ""
+msgid "CodeCookies Essentials: A set of powerful tools like shortcodes, widgets and font-awesome icons to extend the functionality of your WordPress site."
+msgstr "CodeCookies Essentials: A set of powerful tools like shortcodes, widgets and font-awesome icons to extend the performance of your WordPress website."
 
 #. Author of the plugin/theme
 msgid "CodeCooki.es"
-msgstr ""
+msgstr "CodeCooki.es"
 
 #. Author URI of the plugin/theme
 msgid "http://codecooki.es"
-msgstr ""
+msgstr "http://codecooki.es"

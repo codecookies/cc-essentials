@@ -37,7 +37,7 @@ class CCELoveIt {
 			global $cce;
 			wp_enqueue_style( 'cce-loveit', $cce->plugin_url() . '/assets/css/cce-loveit.css' );
 			wp_enqueue_script( 'cce-loveit', $cce->plugin_url() . '/assets/js/min/cce-loveit.min.js', array('jquery'), false, true );
-			wp_localize_script( 'cce-loveit', 'cce_loveit', array('ajaxurl' => admin_url('admin-ajax.php'), 'loved_text' => __( 'You already loved this!', 'cc' )) );
+			wp_localize_script( 'cce-loveit', 'cce_loveit', array('ajaxurl' => admin_url('admin-ajax.php'), 'loved_text' => __( 'You already loved this!', 'cc-essentials' )) );
 		}
 	}
 	
@@ -82,7 +82,7 @@ class CCELoveIt {
 	}
 	
 	function cce_loveit_column_title( $defaults ) {
-		$defaults['cce-loveit-data'] = __( 'Loves received', 'cc' );
+		$defaults['cce-loveit-data'] = __( 'Loves received', 'cc-essentials' );
 		return $defaults;
 	}
 	
@@ -90,9 +90,9 @@ class CCELoveIt {
 		if ($column_name == 'cce-loveit-data') {
 			$loves = get_post_meta($post_id, '_cce_loves', true);
 			if ($loves) {
-				echo $loves . ' ' . __( 'loves','cc' );
+				echo $loves . ' ' . __( 'loves','cc-essentials' );
 			} else {
-				echo __( '0 loves','cc' );
+				echo __( '0 loves','cc-essentials' );
 			}
 		}
 	}
@@ -170,11 +170,11 @@ class CCELoveIt {
 		$output = $this->cce_love_this($post->ID, $cce_options['suffix_text_zero'], $cce_options['suffix_text_one'], $cce_options['suffix_text_more']);
   
   		$class = 'cce-loveit';
-  		$title = __('Love this', 'cc');
+  		$title = __('Love this', 'cc-essentials');
   		$prefix_text = $cce_options['prefix_text'];
 		if( isset($_COOKIE['cce_loves_'. $post->ID]) ){
 			$class = 'cce-loveit loved';
-			$title = __('You already loved this!', 'cc');
+			$title = __('You already loved this!', 'cc-essentials');
 		}
 		
 		return '<span class="cce-loveit-wrapper' . $classes . '"><span class="cce-loveit-prefix">' . $prefix_text . '</span><a href="#" class="'. $class .'" id="cce-loveit-'. $post->ID .'" title="'. $title .'">'. $output .'</a></span>';
@@ -200,7 +200,7 @@ function cce_loveit()
 class CCELoveIt_Widget extends WP_Widget {
 
 	function __construct() {
-		parent::__construct( 'cce_loveit_widget', __('CC - Most Loved Posts', 'cc'), array( 'description' => __('Displays most loved posts in descending order.', 'cc') ) );
+		parent::__construct( 'cce_loveit_widget', __('CC - Most Loved Posts', 'cc-essentials'), array( 'description' => __('Displays most loved posts in descending order.', 'cc-essentials') ) );
 	}
 
 	function widget( $args, $instance ) {
@@ -263,7 +263,7 @@ class CCELoveIt_Widget extends WP_Widget {
 		);
 
 		$defaults = array(
-			'title' => __('Most loved posts', 'cc'),
+			'title' => __('Most loved posts', 'cc-essentials'),
 			'description' => '',
 			'posts' => 5,
 			'display_count' => 1
@@ -279,25 +279,25 @@ class CCELoveIt_Widget extends WP_Widget {
 		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'cc'); ?></label> 
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'cc-essentials'); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('description'); ?>"><?php _e('Description:', 'cc'); ?></label> 
+			<label for="<?php echo $this->get_field_id('description'); ?>"><?php _e('Description:', 'cc-essentials'); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id('description'); ?>" name="<?php echo $this->get_field_name('description'); ?>" type="text" value="<?php echo $description; ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('posts'); ?>"><?php _e('Posts:', 'cc'); ?></label> 
+			<label for="<?php echo $this->get_field_id('posts'); ?>"><?php _e('Posts:', 'cc-essentials'); ?></label> 
 			<input id="<?php echo $this->get_field_id('posts'); ?>" name="<?php echo $this->get_field_name('posts'); ?>" type="text" value="<?php echo $posts; ?>" size="3" />
 		</p>
 		<p>
 			<input id="<?php echo $this->get_field_id('display_count'); ?>" name="<?php echo $this->get_field_name('display_count'); ?>" type="checkbox" value="1" <?php checked( $display_count ); ?>>
-			<label for="<?php echo $this->get_field_id('display_count'); ?>"><?php _e('Display counts', 'cc'); ?></label>
+			<label for="<?php echo $this->get_field_id('display_count'); ?>"><?php _e('Display counts', 'cc-essentials'); ?></label>
 		</p>
 		
 		<p>
 			<input id="<?php echo $this->get_field_id('display_suffix_prefix'); ?>" name="<?php echo $this->get_field_name('display_suffix_prefix'); ?>" type="checkbox" value="1" <?php checked( $display_suffix_prefix ); ?>>
-			<label for="<?php echo $this->get_field_id('display_suffix_prefix'); ?>"><?php echo sprintf(__('Display suffix & prefix %1$sEdit%2$s', 'cc'), '<small>(<a href="admin.php?page=cce">', '</a>)</small>' ); ?></label>
+			<label for="<?php echo $this->get_field_id('display_suffix_prefix'); ?>"><?php echo sprintf(__('Display suffix & prefix %1$sEdit%2$s', 'cc-essentials'), '<small>(<a href="admin.php?page=cce">', '</a>)</small>' ); ?></label>
 		</p>
 
 		<?php

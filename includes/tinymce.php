@@ -114,43 +114,43 @@ class CCEssentials_TinyMCE {
 		$style_formats = array(
 			// Big (big)
 			array(
-				'title'   => __( 'Run In', 'cc' ),
+				'title'   => __( 'Run In', 'cc-essentials' ),
 				'block'   => 'p',
 				'classes' => 'cce-intro-text run-in',
 			),
 			array(
-				'title' => __( 'Alert', 'cc' ),
+				'title' => __( 'Alert', 'cc-essentials' ),
 				'items' => array(
 					array(
-						'title'      => __( 'Green', 'cc' ),
+						'title'      => __( 'Green', 'cc-essentials' ),
 						'block'      => 'p',
 						'attributes' => array(
 							'class' => 'cce-alert cce-alert--green',
 						),
 					),
 					array(
-						'title'      => __( 'Red', 'cc' ),
+						'title'      => __( 'Red', 'cc-essentials' ),
 						'block'      => 'p',
 						'attributes' => array(
 							'class' => 'cce-alert cce-alert--red',
 						),
 					),
 					array(
-						'title'      => __( 'Yellow', 'cc' ),
+						'title'      => __( 'Yellow', 'cc-essentials' ),
 						'block'      => 'p',
 						'attributes' => array(
 							'class' => 'cce-alert cce-alert--yellow',
 						),
 					),
 					array(
-						'title'      => __( 'Blue', 'cc' ),
+						'title'      => __( 'Blue', 'cc-essentials' ),
 						'block'      => 'p',
 						'attributes' => array(
 							'class' => 'cce-alert cce-alert--blue',
 						),
 					),
 					array(
-						'title'      => __( 'Grey', 'cc' ),
+						'title'      => __( 'Grey', 'cc-essentials' ),
 						'block'      => 'p',
 						'attributes' => array(
 							'class' => 'cce-alert cce-alert--grey',

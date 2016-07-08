@@ -21,7 +21,7 @@ class CCE_Shortcodes {
 
 			$this->format_shortcode();
 		} else {
-			$this->append_error( __( 'Configuration file does not exist.', 'cc' ) );
+			$this->append_error( __( 'Configuration file does not exist.', 'cc-essentials' ) );
 		}
 	}
 
@@ -119,7 +119,7 @@ class CCE_Shortcodes {
 
 					case 'image';
 						$output = $row_start;
-						$output .= '<a href="#" data-type="image" data-name="' . $pkey . '" data-text="Insert Image" class="cce-open-media button" title="' . esc_attr__( 'Choose Image', 'cc' ) . '">' . __( 'Choose Image', 'cc' ) . '</a>';
+						$output .= '<a href="#" data-type="image" data-name="' . $pkey . '" data-text="Insert Image" class="cce-open-media button" title="' . esc_attr__( 'Choose Image', 'cc-essentials' ) . '">' . __( 'Choose Image', 'cc-essentials' ) . '</a>';
 						$output .= '<input class="cce-input" type="text" name="' . $pkey . '" id="' . $pkey . '" value="' . $param['std'] . '" />';
 						$output .= $row_end;
 						$this->append_output( $output );
@@ -127,7 +127,7 @@ class CCE_Shortcodes {
 
 					case 'video';
 						$output = $row_start;
-						$output .= '<a href="#" data-type="video" data-name="' . $pkey . '" data-text="Insert Video" class="cce-open-media button" title="' . esc_attr__( 'Choose Video', 'cc' ) . '">' . __( 'Choose Video', 'cc' ) . '</a>';
+						$output .= '<a href="#" data-type="video" data-name="' . $pkey . '" data-text="Insert Video" class="cce-open-media button" title="' . esc_attr__( 'Choose Video', 'cc-essentials' ) . '">' . __( 'Choose Video', 'cc-essentials' ) . '</a>';
 						$output .= '<input class="cce-input" type="text" name="' . $pkey . '" id="' . $pkey . '" value="' . $param['std'] . '" />';
 						$output .= $row_end;
 						$this->append_output( $output );
@@ -145,7 +145,7 @@ class CCE_Shortcodes {
 					
 					case 'map' :
 						$output = $row_start;
-						$output .= '<input type="text" class="cce-form-text cce-form-location cce-input" data-key="' . $pkey . '" name="address-' . $pkey . '" id="address-' . $pkey . '" placeholder="' . __('Enter a location', 'cc') . '" hidden="hidden" />'."\n";
+						$output .= '<input type="text" class="cce-form-text cce-form-location cce-input" data-key="' . $pkey . '" name="address-' . $pkey . '" id="address-' . $pkey . '" placeholder="' . __('Enter a location', 'cc-essentials') . '" hidden="hidden" />'."\n";
 						$output .= '<div class="cce-form-mappicker" id="picker-' . $pkey . '"></div>'."\n";
 						$output .= '<input type="text" class="cce-form-text cce-input" name="lat-' . $pkey . '" id="lat-' . $pkey . '" value="" />'."\n";
 						$output .= '<input type="text" class="cce-form-text cce-input" name="long-' . $pkey . '" id="long-' . $pkey . '" value="" />'."\n";

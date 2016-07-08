@@ -9,9 +9,8 @@
  * License: GPL2
  * Requires at least: 4.0
  * Tested up to: 4.4
- *
- * Text Domain: cc
- * Domain Path: /languages/
+ * Text Domain: cc-essentials
+ * Domain Path: /languages
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -107,7 +106,7 @@ class CCEssentials {
 	 */
 	public function new_action_links( $links ) {
 		$action_links = array(
-			'<a href="' . admin_url( 'options-general.php?page=cce' ) . '">' . __( 'Configure', 'cc' ) . '</a>'
+			'<a href="' . admin_url( 'options-general.php?page=cce' ) . '">' . __( 'Configure', 'cc-essentials' ) . '</a>'
 		);
 
 		return array_merge( $action_links, $links );
@@ -139,7 +138,7 @@ class CCEssentials {
 	 * @return void
 	 */
 	public function cce_settings_page() {
-		add_menu_page( __( 'CC Essentials - Settings', 'cc' ), __( 'CC Essentials', 'cc' ), 'update_core', 'cce', 'cce_options_page', 'dashicons-admin-plugins' );
+		add_menu_page( __( 'CC Essentials - Settings', 'cc-essentials' ), __( 'CC Essentials', 'cc-essentials' ), 'update_core', 'cce', 'cce_options_page', 'dashicons-admin-plugins' );
 	}
 	
 	/**
@@ -178,8 +177,8 @@ class CCEssentials {
 		$cce_lang_dir = apply_filters( 'cce_languages_directory', $cce_lang_dir );
 
 		// Traditional WordPress plugin locale filter
-		$locale        = apply_filters( 'plugin_locale',  get_locale(), 'cc' );
-		$mofile        = sprintf( '%1$s-%2$s.mo', 'cc', $locale );
+		$locale        = apply_filters( 'plugin_locale',  get_locale(), 'cc-essentials' );
+		$mofile        = sprintf( '%1$s-%2$s.mo', 'cc-essentials', $locale );
 
 		// Setup paths to current locale file
 		$mofile_local  = $cce_lang_dir . $mofile;
@@ -188,17 +187,17 @@ class CCEssentials {
 		if ( file_exists( $mofile_global ) ) {
 			
 			// Look in global /wp-content/languages/cce folder
-			load_textdomain( 'cc', $mofile_global );
+			load_textdomain( 'cc-essentials', $mofile_global );
 		
 		} elseif ( file_exists( $mofile_local ) ) {
 			
 			// Look in local /wp-content/plugins/cce/languages/ folder
-			load_textdomain( 'cc', $mofile_local );
+			load_textdomain( 'cc-essentials', $mofile_local );
 		
 		} else {
 			
 			// Load the default language files
-			load_plugin_textdomain( 'cc', false, $cce_lang_dir );
+			load_plugin_textdomain( 'cc-essentials', false, $cce_lang_dir );
 		
 		}
 	}

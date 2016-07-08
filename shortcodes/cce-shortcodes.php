@@ -30,8 +30,8 @@ class CCShortcodes {
 
 		wp_localize_script( 'jquery', 'CCShortcodes', array(
 			'plugin_folder'           => WP_PLUGIN_URL .'/shortcodes',
-			'media_frame_video_title' => __( 'Upload or select a video', 'cc' ),
-			'media_frame_image_title' => __( 'Upload or select an image', 'cc' )
+			'media_frame_video_title' => __( 'Upload or select a video', 'cc-essentials' ),
+			'media_frame_image_title' => __( 'Upload or select an image', 'cc-essentials' )
 		) );
 	}
 
@@ -96,7 +96,7 @@ class CCShortcodes {
 			</div>
 			
 			<div id="cce-sc-form-footer">
-				<a href="#" class="button button-primary button-large cce-insert"><?php _e( 'Insert Shortcode', 'cc' ); ?></a>
+				<a href="#" class="button button-primary button-large cce-insert"><?php _e( 'Insert Shortcode', 'cc-essentials' ); ?></a>
 			</div>
 
 			<div class="clear"></div>

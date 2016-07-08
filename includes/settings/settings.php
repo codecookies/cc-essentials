@@ -34,7 +34,7 @@ function cce_options_page() {
 	ob_start(); ?>
 
 	<div class="wrap">
-		<h2><?php _e('CC Essentials – Settings', 'cc'); ?></h2>
+		<h2><?php _e('CC Essentials – Settings', 'cc-essentials'); ?></h2>
 		<h2 class="nav-tab-wrapper">
 			<?php
 			foreach ( cce_get_settings_tabs() as $tab_id => $tab_name ) {
@@ -84,8 +84,8 @@ function cce_options_page() {
  */
 function cce_get_settings_tabs() {
 	$tabs              = array();
-	$tabs['loveit']    = __( 'Love It! button', 'cc' );
-	$tabs['social']    = __( 'Social buttons', 'cc' );
+	$tabs['loveit']    = __( 'Love It! button', 'cc-essentials' );
+	$tabs['social']    = __( 'Social buttons', 'cc-essentials' );
 
 	return apply_filters( 'cce_get_settings_tabs', $tabs );
 }
@@ -141,7 +141,7 @@ function cce_settings_sanitize( $input = array() ) {
 	// Merge our new settings with the existing
 	$output = array_merge( $cce_options, $output );
 
-	add_settings_error( 'cce-notices', '', __( 'Settings Updated', 'cc' ), 'updated' );
+	add_settings_error( 'cce-notices', '', __( 'Settings Updated', 'cc-essentials' ), 'updated' );
 
 	return $output;
 }
@@ -207,8 +207,8 @@ function cce_get_registered_settings() {
 					'desc' 			=> __('Specify where the ‘Love It!’ button should be displayed.', 'verve'),
 					'type' 			=> 'checkbox',
 					'options'		=> array (
-						'post'	=> array( 'name' => __( 'Blog posts', 'cc' ) ),
-						'page'  => array( 'name' => __( 'Pages', 'cc' ) ),
+						'post'	=> array( 'name' => __( 'Blog posts', 'cc-essentials' ) ),
+						'page'  => array( 'name' => __( 'Pages', 'cc-essentials' ) ),
 						
 					)
 				),
@@ -399,7 +399,7 @@ function cce_get_registered_settings() {
 
 
 function cce_missing_callback( $args ) {
-	printf( __( 'The callback function used for the <strong>%s</strong> setting is missing.', 'cc' ), $args['id'] );
+	printf( __( 'The callback function used for the <strong>%s</strong> setting is missing.', 'cc-essentials' ), $args['id'] );
 }
 
 /**
