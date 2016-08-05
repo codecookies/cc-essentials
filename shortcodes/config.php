@@ -625,7 +625,7 @@ $cce_shortcodes['map'] = array(
 			'std'   => '350px',
 			'type'  => 'text',
 			'label' => __( 'Height', 'cc-essentials' ),
-			'desc'  => __( 'Enter the width of the map in px, em or %. Default is <i>350px</i>.', 'cc-essentials' )
+			'desc'  => __( 'Enter the height of the map in px, em or %. Default is <i>350px</i>.', 'cc-essentials' )
 		),
 		'zoom' => array(
 			'std'   => '15',
@@ -637,7 +637,7 @@ $cce_shortcodes['map'] = array(
 			'std'     => 'none',
 			'type'    => 'select',
 			'label'   => __( 'Map style', 'cc-essentials' ),
-			'desc'    => __( 'Choose a map style.', 'cc-essentials' ),
+			'desc'    => __( 'Choose a style for the map.', 'cc-essentials' ),
 			'options' => array(
 				'none'             => __( 'None', 'cc-essentials' ),
 				'pale_dawn'        => __( 'Pale Dawn', 'cc-essentials' ),
