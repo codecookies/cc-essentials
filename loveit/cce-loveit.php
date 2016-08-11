@@ -177,7 +177,9 @@ class CCELoveIt {
 			$title = __('You already loved this!', 'cc-essentials');
 		}
 		
-		return '<span class="cce-loveit-wrapper' . $classes . '"><span class="cce-loveit-prefix">' . $prefix_text . '</span><a href="#" class="'. $class .'" id="cce-loveit-'. $post->ID .'" title="'. $title .'">'. $output .'</a></span>';
+		$prefix_span = ( '' != $prefix_text ) ? '<span class="cce-loveit-prefix">' . $prefix_text . '</span>' : false;
+		
+		return '<span class="cce-loveit-wrapper' . $classes . '">' . $prefix_span . '<a href="#" class="'. $class .'" id="cce-loveit-'. $post->ID .'" title="'. $title .'">'. $output .'</a></span>';
 	}
 	
 }
