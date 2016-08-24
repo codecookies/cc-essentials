@@ -19,8 +19,9 @@ function cce_get_settings() {
 	if ( empty( $settings ) ) {
 		$loveit_settings = is_array( get_option( 'cce_settings_loveit' ) ) ? get_option( 'cce_settings_loveit' ) : array();
 		$social_settings = is_array( get_option( 'cce_settings_social' ) ) ? get_option( 'cce_settings_social' ) : array();
+		$maps_settings = is_array( get_option( 'cce_settings_maps' ) ) ? get_option( 'cce_settings_maps' ) : array();
 
-		$settings = array_merge( $loveit_settings, $social_settings );
+		$settings = array_merge( $loveit_settings, $social_settings, $maps_settings );
 
 		update_option( 'cce_options', $settings );
 	}
@@ -86,6 +87,7 @@ function cce_get_settings_tabs() {
 	$tabs              = array();
 	$tabs['loveit']    = __( 'Love It! button', 'cc-essentials' );
 	$tabs['social']    = __( 'Social buttons', 'cc-essentials' );
+	$tabs['maps']    = __( 'Map settings', 'cc-essentials' );
 
 	return apply_filters( 'cce_get_settings_tabs', $tabs );
 }
@@ -389,6 +391,17 @@ function cce_get_registered_settings() {
 					'placeholder' 	=> 'https://profiles.wordpress.org/username',
 					'desc' 			=> 'Enter the URL of your WordPress profile.',
 					'type' 			=> 'url'
+				)
+			)
+		),
+		'maps' => apply_filters( 'cce_social_settings',
+			array(
+				'api_key' => array(
+					'id'   			=> 'api_key',
+					'name' 			=> 'Google Maps API Key',
+					'placeholder' 	=> '',
+					'desc' 			=> sprintf( __('An API key is required for proper functioning of the &lsquo;Google Map&rsquo; shortcode. %sGet your free Maps API Key%s.', 'cc-essentials'), '<a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank">', '</a>'),
+					'type' 			=> 'text'
 				)
 			)
 		)

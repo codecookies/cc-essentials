@@ -613,7 +613,7 @@ $cce_shortcodes['map'] = array(
 			'std'   => '',
 			'type'  => 'map',
 			'label' => __( 'Latitude / Longitude', 'cc-essentials' ),
-			'desc'  => __( 'Drag and drop the map marker to select the exact location.', 'cc-essentials' )
+			'desc'  => sprintf(__( 'Drag and drop the map marker to select the exact location. You&#8217;ll need a Google Maps API key for maps to work. %sGet your free API key%s and %senter it here%s.', 'cc-essentials' ), '<a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank">', '</a>', '<a href="admin.php?page=cce&tab=maps">', '</a>')
 		),
 		'width' => array(
 			'std'   => '100%',

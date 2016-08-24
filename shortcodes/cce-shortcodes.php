@@ -13,6 +13,9 @@ class CCShortcodes {
 
 	public function admin_menu_styles( $hook ) {
 		global $cce;
+		
+		$cce_options = get_option('cce_options');
+		$api_key = isset( $cce_options['api_key'] ) ? 'key='.$cce_options['api_key'] : false;
 
 		wp_enqueue_style( 'cce-admin-shortcodes-styles', $cce->plugin_url() . '/assets/css/cce-admin-styles-shortcodes.css' );
 
@@ -22,7 +25,7 @@ class CCShortcodes {
 		wp_enqueue_script( 'font-awesome-icons-list' );
 
 		wp_enqueue_script( 'jquery-ui-sortable' );
-		wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?&libraries=places', null, $cce->version, true );
+		wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?'.$api_key.'&libraries=places', null, $cce->version, true );
 		wp_enqueue_script( 'cce-shortcode-plugins', $cce->plugin_url() . '/assets/js/min/shortcodes_plugins.min.js', array( 'font-awesome-icons-list', 'google-maps' ), $cce->version, true );
 		
 		wp_enqueue_style( 'wp-color-picker' );        

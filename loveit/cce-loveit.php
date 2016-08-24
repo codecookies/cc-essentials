@@ -277,7 +277,7 @@ class CCELoveIt_Widget extends WP_Widget {
 		$description = $instance['description'];
 		$posts = $instance['posts'];
 		$display_count = $instance['display_count'];
-		$display_suffix_prefix = $instance['display_suffix_prefix'];
+		$display_suffix_prefix = isset( $instance['display_suffix_prefix'] ) ? $instance['display_suffix_prefix'] : false;
 		?>
 
 		<p>

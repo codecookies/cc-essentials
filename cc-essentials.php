@@ -92,6 +92,7 @@ class CCEssentials {
 		add_action( 'admin_menu', array( &$this, 'cce_settings_page' ) );
 		add_action( 'after_setup_theme', array( &$this, 'cce_shortcode_css') );
 		add_action( 'after_setup_theme', array( &$this, 'cce_loveit_class') );
+		add_action( 'after_setup_theme', array( &$this, 'cce_contactme_methods') );
 
 		// Include required files
 		$this->includes();
@@ -162,6 +163,17 @@ class CCEssentials {
 	 */
 	public function cce_loveit_class() {
 		include_once( 'loveit/cce-loveit.php' );
+	}
+	
+	/**
+	 * CCE Additional Contact Me methods for authors.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 * @return void
+	 */
+	public function cce_contactme_methods() {
+		include_once( 'contact-methods/cce-contact-methods.php' );
 	}
 
 	/**
