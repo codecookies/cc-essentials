@@ -416,7 +416,7 @@ function cce_map( $atts ) {
 	$cce_options = get_option('cce_options');
 	$api_key = isset( $cce_options['api_key'] ) ? 'key='.$cce_options['api_key'] : false;
 
-	wp_enqueue_script( 'google-maps', ( is_ssl() ? 'https' : 'http' ) . '://maps.googleapis.com/maps/api/js?'.$api_key.'&v=3.exp&sensor=false' );
+	wp_enqueue_script( 'google-maps', ( is_ssl() ? 'https' : 'http' ) . '://maps.googleapis.com/maps/api/js?'.$api_key.'&v=3.exp' );
 
 	?>
 
