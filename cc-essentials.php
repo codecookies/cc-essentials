@@ -3,7 +3,7 @@
  * Plugin Name: CC Essentials
  * Plugin URI: https://wordpress.org/plugins/cc-essentials/
  * Description: CodeCookies Essentials: A set of powerful tools like shortcodes, widgets and font-awesome icons to extend the functionality of your WordPress site.
- * Version: 1.0.0
+ * Version: 1.1
  * Author: CodeCooki.es
  * Author URI: http://codecooki.es
  * License: GPL2

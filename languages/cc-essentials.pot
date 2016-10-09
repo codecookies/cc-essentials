@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CC Essentials\n"
-"POT-Creation-Date: 2016-08-23 23:08+0530\n"
-"PO-Revision-Date: 2016-08-23 23:09+0530\n"
+"POT-Creation-Date: 2016-10-09 19:25+0530\n"
+"PO-Revision-Date: 2016-10-09 19:25+0530\n"
 "Last-Translator: CodeCookies\n"
 "Language-Team: CodeCookies\n"
 "Language: en_US\n"
@@ -186,41 +186,53 @@ msgid ""
 msgstr ""
 
 #: includes/settings/settings.php:239
-msgid "Suffix text when 1 love received"
+msgid "Hide count when no loves received"
 msgstr ""
 
 #: includes/settings/settings.php:240
+msgid "Check this to hide the ‘0’ count when no loves are received."
+msgstr ""
+
+#: includes/settings/settings.php:243
+msgid "Yes, hide it"
+msgstr ""
+
+#: includes/settings/settings.php:248
+msgid "Suffix text when 1 love received"
+msgstr ""
+
+#: includes/settings/settings.php:249
 msgid "person loved this!"
 msgstr ""
 
-#: includes/settings/settings.php:241
+#: includes/settings/settings.php:250
 msgid ""
 "The text after the count when one person has loved a post/page. Leave blank "
 "for no text after the count."
 msgstr ""
 
-#: includes/settings/settings.php:246
+#: includes/settings/settings.php:255
 msgid "Suffix text when more than 1 loves received"
 msgstr ""
 
-#: includes/settings/settings.php:247
+#: includes/settings/settings.php:256
 msgid "people loved this!"
 msgstr ""
 
-#: includes/settings/settings.php:248
+#: includes/settings/settings.php:257
 msgid ""
 "The text after the count when more than one person has loved a post/page. "
 "Leave blank for no text after the count."
 msgstr ""
 
-#: includes/settings/settings.php:403
+#: includes/settings/settings.php:412
 #, php-format
 msgid ""
 "An API key is required for proper functioning of the &lsquo;Google "
 "Map&rsquo; shortcode. %sGet your free Maps API Key%s."
 msgstr ""
 
-#: includes/settings/settings.php:415
+#: includes/settings/settings.php:424
 #, php-format
 msgid ""
 "The callback function used for the <strong>%s</strong> setting is missing."
@@ -286,7 +298,7 @@ msgstr ""
 msgid "Dotted"
 msgstr ""
 
-#: loveit/cce-loveit.php:40 loveit/cce-loveit.php:177
+#: loveit/cce-loveit.php:40 loveit/cce-loveit.php:183
 msgid "You already loved this!"
 msgstr ""
 
@@ -302,39 +314,41 @@ msgstr ""
 msgid "0 loves"
 msgstr ""
 
-#: loveit/cce-loveit.php:173
+#: loveit/cce-loveit.php:179
 msgid "Love this"
 msgstr ""
 
-#: loveit/cce-loveit.php:205
-msgid "CC - Most Loved Posts"
+#: loveit/cce-loveit.php:211
+msgid "&#x95; [CC] Most Loved Posts"
 msgstr ""
 
-#: loveit/cce-loveit.php:205
-msgid "Displays most loved posts in descending order."
+#: loveit/cce-loveit.php:211
+msgid ""
+"Displays most loved posts in descending order. Installed by &#x2018;CC "
+"Essentials&#x2019; plugin."
 msgstr ""
 
-#: loveit/cce-loveit.php:268
+#: loveit/cce-loveit.php:274
 msgid "Most loved posts"
 msgstr ""
 
-#: loveit/cce-loveit.php:284
+#: loveit/cce-loveit.php:290
 msgid "Title:"
 msgstr ""
 
-#: loveit/cce-loveit.php:288
+#: loveit/cce-loveit.php:294
 msgid "Description:"
 msgstr ""
 
-#: loveit/cce-loveit.php:292
+#: loveit/cce-loveit.php:298
 msgid "Posts:"
 msgstr ""
 
-#: loveit/cce-loveit.php:297
+#: loveit/cce-loveit.php:303
 msgid "Display counts"
 msgstr ""
 
-#: loveit/cce-loveit.php:302
+#: loveit/cce-loveit.php:308
 #, php-format
 msgid "Display suffix & prefix %1$sEdit%2$s"
 msgstr ""
