@@ -234,6 +234,15 @@ function cce_get_registered_settings() {
 					'desc' 			=> __('The text after the count when no one has loved a post/page. Leave blank for no text after the count.', 'verve'),
 					'type' 			=> 'text'
 				),
+				'hide_count_if_zero' => array(
+					'id'   			=> 'hide_count_if_zero',
+					'name' 			=> __('Hide count when no loves received', 'verve'),
+					'desc' 			=> __('Check this to hide the ‘0’ count when no loves are received.', 'verve'),
+					'type' 			=> 'checkbox',
+					'options'		=> array (
+						'yes'	=> array( 'name' => __( 'Yes, hide it', 'cc-essentials' ) )					
+					)
+				),
 				'suffix_text_one' => array(
 					'id'   			=> 'suffix_text_one',
 					'name' 			=> __('Suffix text when 1 love received', 'verve'),

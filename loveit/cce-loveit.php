@@ -104,17 +104,17 @@ class CCELoveIt {
 		if( isset($_POST['loves_id']) ) {
 		    // Click event. Get and Update Count
 			$post_id = str_replace('cce-loveit-', '', $_POST['loves_id']);
-			echo $this->cce_love_this($post_id, $cce_options['suffix_text_zero'], $cce_options['suffix_text_one'], $cce_options['suffix_text_more'], 'update');
+			echo $this->cce_love_this($post_id, $cce_options['suffix_text_zero'], $cce_options['hide_count_if_zero']['yes'], $cce_options['suffix_text_one'], $cce_options['suffix_text_more'], 'update');
 		} else {
 		    // AJAXing data in. Get Count
 			$post_id = str_replace('cce-loveit-', '', $_POST['post_id']);
-			echo $this->cce_love_this($post_id, $cce_options['suffix_text_zero'], $cce_options['suffix_text_one'], $cce_options['suffix_text_more'], 'get');
+			echo $this->cce_love_this($post_id, $cce_options['suffix_text_zero'], $cce_options['hide_count_if_zero']['yes'], $cce_options['suffix_text_one'], $cce_options['suffix_text_more'], 'get');
 		}
 
 		exit;
 	}
 
-	function cce_love_this($post_id, $suffix_text_zero = false, $suffix_text_one = false, $suffix_text_more = false, $action = 'get') {
+	function cce_love_this($post_id, $suffix_text_zero = false, $hide_count_if_zero = false, $suffix_text_one = false, $suffix_text_more = false, $action = 'get') {
 		if(!is_numeric($post_id)) return;
 		$suffix_text_zero = strip_tags($suffix_text_zero);
 		$suffix_text_one = strip_tags($suffix_text_one);
@@ -124,6 +124,7 @@ class CCELoveIt {
 
 			case 'get':
 				$loves = get_post_meta($post_id, '_cce_loves', true);
+				$love_count_span = '';
 				if( !$loves ){
 					$loves = 0;
 					add_post_meta($post_id, '_cce_loves', $loves, true);
@@ -132,12 +133,15 @@ class CCELoveIt {
 				if( $loves == 0 ) { $suffix = $suffix_text_zero; }
 				elseif( $loves == 1 ) { $suffix = $suffix_text_one; }
 				else { $suffix = $suffix_text_more; }
+				
+				if( !($loves == 0 && $hide_count_if_zero) ) { $love_count_span = '<span class="cce-loveit-count">'. $loves .'</span>'; }
 
-				return '<span class="cce-loveit-count">'. $loves .'</span><span class="cce-loveit-suffix">'. $suffix .'</span>';
+				return $love_count_span.'<span class="cce-loveit-suffix">'. $suffix .'</span>';
 				break;
 
 			case 'update':
 				$loves = get_post_meta($post_id, '_cce_loves', true);
+				$love_count_span = '';
 				if( isset($_COOKIE['cce_loves_'. $post_id]) ) return $loves;
 
 				$loves++;
@@ -147,8 +151,10 @@ class CCELoveIt {
 				if( $loves == 0 ) { $suffix = $suffix_text_zero; }
 				elseif( $loves == 1 ) { $suffix = $suffix_text_one; }
 				else { $suffix = $suffix_text_more; }
+				
+				if( !($loves == 0 && $hide_count_if_zero) ) { $love_count_span = '<span class="cce-loveit-count">'. $loves .'</span>'; }
 
-				return '<span class="cce-loveit-count">'. $loves .'</span><span class="cce-loveit-suffix">'. $suffix .'</span>';
+				return $love_count_span.'<span class="cce-loveit-suffix">'. $suffix .'</span>';
 				break;
 
 		}
